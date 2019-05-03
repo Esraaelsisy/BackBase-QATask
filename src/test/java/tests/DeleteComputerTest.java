@@ -22,14 +22,12 @@ public class DeleteComputerTest extends TestBase {
 		Assert.assertTrue(numberAfterAdding == (numberBeforeAdding + 1), "Number of computers is not increased by 1");
 		Thread.sleep(2000);
 		mainComputerObj.searchForComputerName(computerName);
-		System.out.println(searchResultsObj.firstRowLink.getText());
-		Assert.assertTrue(searchResultsObj.firstRowLink.getText().contains(computerName));
+		Assert.assertTrue(searchResultsObj.getComputerName().contains(computerName));
 		searchResultsObj.selectingFirstRowinSearchResults();
 		editComputerObj.deleteSavedComputer();
 		Assert.assertTrue(mainComputerObj.actionSuccessMsg.getText().contains("has been deleted"),
 				"No Assertion for 'has been deleted' success message");
 		System.out.println("Success message of 'has been deleted' is shown");
 	}
-
 
 }

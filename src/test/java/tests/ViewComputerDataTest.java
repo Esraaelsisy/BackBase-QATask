@@ -9,7 +9,7 @@ import utilities.helper;
 
 public class ViewComputerDataTest extends TestBase {
 
-	@Test(dataProvider = "Computer Data", priority = 1, enabled = false)
+	@Test(dataProvider = "Computer Data", priority = 1)
 	public void userCanViewComputerDataInSearchResults(String computerName, String newcomputerName,
 			String introducedDate, String discontinuedDate, String companyOption)
 			throws InterruptedException, ParseException {
@@ -23,20 +23,20 @@ public class ViewComputerDataTest extends TestBase {
 		mainComputerObj.searchForComputerName(computerName);
 		Thread.sleep(2000);
 
-		Assert.assertTrue(searchResultsObj.firstRowLink.getText().contains(computerName),
+		Assert.assertTrue(searchResultsObj.getComputerName().contains(computerName),
 				"No Assertion for the computer name matches the search text");
 
-		String IntroducedDateTxt = helper.formatDates(searchResultsObj.firstRowIntoducedDateLabel.getText());
-		System.out.println(IntroducedDateTxt);
+		String IntroducedDateTxt = helper.formatDates(searchResultsObj.getIntroducedDate());
+		System.out.println("Introduced Date After Formatting is " + IntroducedDateTxt);
 
-		String DiscontinuedDateTxt = helper.formatDates(searchResultsObj.firstRowDiscontinuedDateLabel.getText());
-		System.out.println(DiscontinuedDateTxt);
+		String DiscontinuedDateTxt = helper.formatDates(searchResultsObj.getDiscontinuedDate());
+		System.out.println("Discontinued Date After Formatting is " + DiscontinuedDateTxt);
 
 		Assert.assertTrue(IntroducedDateTxt.contains(introducedDate),
 				"No Assertion for the computer name matches the search text");
 		Assert.assertTrue(DiscontinuedDateTxt.contains(discontinuedDate),
 				"No Assertion for the computer name matches the search text");
-		Assert.assertTrue(searchResultsObj.firstRowCompanyLabel.getText().contains(companyOption),
+		Assert.assertTrue(searchResultsObj.getCompanyOption().contains(companyOption),
 				"No Assertion for the computer name matches the search text");
 		System.out.println("Computer name of first row in results table is :  " + computerName);
 
@@ -44,7 +44,7 @@ public class ViewComputerDataTest extends TestBase {
 		editComputerObj.cancelediting();
 	}
 
-	@Test(dataProvider = "Computer Data", priority = 1)
+	@Test(dataProvider = "Computer Data", priority = 2)
 	public void userCanViewComputerDataInEditPage(String computerName, String newcomputerName, String introducedDate,
 			String discontinuedDate, String companyOption) throws InterruptedException, ParseException {
 		mainComputerObj.clickonAddComputerBtn();
@@ -55,15 +55,14 @@ public class ViewComputerDataTest extends TestBase {
 				"No Assertion for 'has been created' success message");
 		System.out.println("Success message of 'has been added' is shown");
 		mainComputerObj.searchForComputerName(computerName);
-		Assert.assertTrue(searchResultsObj.firstRowLink.getText().contains(computerName));
+		Assert.assertTrue(searchResultsObj.getComputerName().contains(computerName));
 		searchResultsObj.selectingFirstRowinSearchResults();
 
 		Thread.sleep(2000);
-		System.out.println(editComputerObj.sendComputerName());
-		Assert.assertTrue(editComputerObj.sendComputerName().contains(computerName));
-		Assert.assertTrue(editComputerObj.sendIntroducedDate().contains(introducedDate));
-		Assert.assertTrue(editComputerObj.sendDiscountinuedDate().contains(discontinuedDate));
-		Assert.assertTrue(editComputerObj.sendCompanySelection().contains(companyOption));
+		Assert.assertTrue(editComputerObj.getComputerName().contains(computerName));
+		Assert.assertTrue(editComputerObj.getIntroducedDate().contains(introducedDate));
+		Assert.assertTrue(editComputerObj.getDiscountinuedDate().contains(discontinuedDate));
+		Assert.assertTrue(editComputerObj.getCompanySelection().contains(companyOption));
 		editComputerObj.editComputerName(newcomputerName);
 		Assert.assertTrue(mainComputerObj.actionSuccessMsg.getText().contains("has been updated"),
 				"No Assertion for 'has been updated' success message");

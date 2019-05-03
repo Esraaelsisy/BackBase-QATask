@@ -10,6 +10,9 @@ public class AddComputerPage extends PageBase {
 		super(driver);
 	}
 
+	/*
+	 * Finding all needed WebElements in the page by their Locators
+	 */
 	@FindBy(id = "name")
 	private WebElement nameTxtBox;
 
@@ -34,16 +37,27 @@ public class AddComputerPage extends PageBase {
 	@FindBy(xpath = "//div[@class='input']//span[@class='help-inline'and contains(text() , 'Date' )][1]")
 	public WebElement introduceDateMissingLabel;
 
+	/*
+	 * Function for Adding a new computer with all data needed
+	 * 
+	 * @param computer name , introduced date , discontinued date and company
+	 * selection
+	 */
 	public void addNewComputer(String name, String introducedDate, String discontinuedDate, String companyoption) {
 		typeInTxtBox(nameTxtBox, name);
 		typeInTxtBox(introducedDateTxtBox, introducedDate);
 		typeInTxtBox(discontinuedDateTxtBox, discontinuedDate);
 		selectFromSelectElement(companyList, companyoption);
 		clickBtn(createComputerBtn);
-		System.out.println("New computer has been added");
+		System.out.println(
+				"New computer has been CREATED with name :  " + name + " , Introduced Date :  " + introducedDate
+						+ " , Discontinued Date :  " + discontinuedDate + " and Company Option :  " + companyoption);
 	}
 
-	public void cancelediting() {
+	/*
+	 * Function for canceling Adding a new computer data
+	 */
+	public void canceladding() {
 		clickBtn(cancelBtn);
 		System.out.println("Cancelling the adding of computer data");
 	}

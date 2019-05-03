@@ -17,12 +17,12 @@ public class SearchForComputerTest extends TestBase {
 		System.out.println("Success message of 'has been added' is shown");
 		mainComputerObj.searchForComputerName(computerName);
 		Thread.sleep(2000);
-		Assert.assertTrue(searchResultsObj.firstRowLink.getText().contains(computerName),
+		Assert.assertTrue(searchResultsObj.getComputerName().contains(computerName),
 				"No Assertion for the computer name matches the search text");
 		System.out.println("Computer name of first row in results table is :  " + computerName);
 		searchResultsObj.selectingFirstRowinSearchResults();
 		editComputerObj.cancelediting();
-		
+
 	}
 
 	@Test(dataProvider = "Computer Data", priority = 2)
@@ -38,8 +38,8 @@ public class SearchForComputerTest extends TestBase {
 		System.out.println("Success message of 'has been added' is shown");
 		Thread.sleep(2000);
 		mainComputerObj.searchForComputerName(computerName);
-		System.out.println(searchResultsObj.firstRowLink.getText());
-		Assert.assertTrue(searchResultsObj.firstRowLink.getText().contains(computerName));
+		System.out.println(searchResultsObj.getComputerName());
+		Assert.assertTrue(searchResultsObj.getComputerName().contains(computerName));
 		searchResultsObj.selectingFirstRowinSearchResults();
 		editComputerObj.deleteSavedComputer();
 		Assert.assertTrue(mainComputerObj.actionSuccessMsg.getText().contains("has been deleted"),

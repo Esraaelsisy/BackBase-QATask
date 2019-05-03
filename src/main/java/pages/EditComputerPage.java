@@ -11,6 +11,10 @@ public class EditComputerPage extends PageBase {
 		super(driver);
 	}
 
+	/*
+	 * Finding all needed WebElements in the page by their Locators
+	 */
+
 	@FindBy(id = "name")
 	private WebElement nameTxtBox;
 
@@ -38,22 +42,37 @@ public class EditComputerPage extends PageBase {
 	@FindBy(xpath = "//div[@class='input']//span[@class='help-inline'and contains(text() , 'Date' )][1]")
 	public WebElement introduceDateMissingLabel;
 
+	/*
+	 * Function for Editing a saved computer with all data
+	 * 
+	 * @param new computer name , introduced date , discontinued date and company
+	 * selection
+	 */
 	public void editSavedComputer(String name, String introducedDate, String discontinuedDate, String companyoption) {
 		typeInTxtBox(nameTxtBox, name);
 		typeInTxtBox(introducedDateTxtBox, introducedDate);
 		typeInTxtBox(discontinuedDateTxtBox, discontinuedDate);
 		selectFromSelectElement(companyList, companyoption);
 		clickBtn(saveComputerBtn);
-		System.out.println("All computer data has been updated");
-
+		System.out.println(
+				"New computer has been UPDATED with name :  " + name + " , Introduced Date :  " + introducedDate
+						+ " , Discontinued Date :  " + discontinuedDate + " and Company Option :  " + companyoption);
 	}
 
+	/*
+	 * Function for Editing a saved computer with its name
+	 * 
+	 * @param new computer name
+	 */
 	public void editComputerName(String name) {
 		typeInTxtBox(nameTxtBox, name);
 		clickBtn(saveComputerBtn);
-		System.out.println("Computer Name is updated");
+		System.out.println("Computer Name is UPDATE with name :  " + name);
 	}
 
+	/*
+	 * Function for Deleting a saved computer
+	 */
 	public void deleteSavedComputer() {
 		clickBtn(deleteComputerBtn);
 		System.out.println("Computer has been deleted");
@@ -64,20 +83,24 @@ public class EditComputerPage extends PageBase {
 		System.out.println("Cancelling the editing of computer data");
 	}
 
-	public String sendComputerName() {
+	public String getComputerName() {
+		System.out.println("Computer name is :  " + nameTxtBox.getAttribute("value"));
 		return nameTxtBox.getAttribute("value");
 	}
 
-	public String sendIntroducedDate() {
+	public String getIntroducedDate() {
+		System.out.println("Introduced Date is :  " + introducedDateTxtBox.getAttribute("value"));
 		return introducedDateTxtBox.getAttribute("value");
 	}
 
-	public String sendDiscountinuedDate() {
+	public String getDiscountinuedDate() {
+		System.out.println("Discontinued Date is :  " + discontinuedDateTxtBox.getAttribute("value"));
 		return discontinuedDateTxtBox.getAttribute("value");
 	}
 
-	public String sendCompanySelection() {
+	public String getCompanySelection() {
 		Select elementSelect = new Select(companyList);
+		System.out.println("Company  Selection is :  " + elementSelect.getFirstSelectedOption().getText());
 		return elementSelect.getFirstSelectedOption().getText();
 	}
 

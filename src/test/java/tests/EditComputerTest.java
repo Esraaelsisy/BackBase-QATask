@@ -23,7 +23,7 @@ public class EditComputerTest extends TestBase {
 		System.out.println("Success message of 'has been added' is shown");
 		Assert.assertTrue(numberAfterAdding == (numberBeforeAdding + 1), "Number of computers is not increased by 1");
 		mainComputerObj.searchForComputerName(computerName);
-		Assert.assertTrue(searchResultsObj.firstRowLink.getText().contains(computerName));
+		Assert.assertTrue(searchResultsObj.getComputerName().contains(computerName));
 		searchResultsObj.selectingFirstRowinSearchResults();
 		editComputerObj.editComputerName(newcomputerName);
 		Assert.assertTrue(mainComputerObj.actionSuccessMsg.getText().contains("has been updated"),
@@ -44,7 +44,7 @@ public class EditComputerTest extends TestBase {
 				"No Assertion for 'has been created' success message");
 		System.out.println("Success message of 'has been added' is shown");
 		mainComputerObj.searchForComputerName(computerName);
-		Assert.assertTrue(searchResultsObj.firstRowLink.getText().contains(computerName));
+		Assert.assertTrue(searchResultsObj.getComputerName().contains(computerName));
 		searchResultsObj.selectingFirstRowinSearchResults();
 		editComputerObj.editSavedComputer(newcomputerName, introducedDate, discontinuedDate, companyOption);
 		Assert.assertTrue(mainComputerObj.actionSuccessMsg.getText().contains("has been updated"),
@@ -55,6 +55,7 @@ public class EditComputerTest extends TestBase {
 	@Test(dataProvider = "Computer Data", priority = 3)
 	public void userCannotEditComputerWithoutName(String computerName, String newcomputerName, String introducedDate,
 			String discontinuedDate, String companyOption) throws InterruptedException {
+		
 		Thread.sleep(2000);
 		mainComputerObj.clickonAddComputerBtn();
 		addComputerObj.addNewComputer(computerName, introducedDate, discontinuedDate, companyOption);
@@ -64,12 +65,13 @@ public class EditComputerTest extends TestBase {
 				"No Assertion for 'has been created' success message");
 		System.out.println("Success message of 'has been added' is shown");
 		mainComputerObj.searchForComputerName(computerName);
-		Assert.assertTrue(searchResultsObj.firstRowLink.getText().contains(computerName));
+		Assert.assertTrue(searchResultsObj.getComputerName().contains(computerName));
 		searchResultsObj.selectingFirstRowinSearchResults();
 		editComputerObj.editSavedComputer("", introducedDate, discontinuedDate, companyOption);
 		String color = helper.colorFormatter(editComputerObj.nameRequiedLabel.getCssValue("color"));
 		System.out.println(color);
 		Assert.assertTrue(color.contains("#9d261d"));
+		helper.captureScreenshot(driver, "Missing Name in Edit Computer Page");
 		editComputerObj.editComputerName(newcomputerName);
 		Assert.assertTrue(mainComputerObj.actionSuccessMsg.getText().contains("has been updated"),
 				"No Assertion for 'has been updated' success message");

@@ -17,7 +17,7 @@ public class AddComputerTest extends TestBase {
 		System.out.println("Number of computers after adding is : " + numberAfterAdding);
 		Assert.assertTrue(mainComputerObj.actionSuccessMsg.getText().contains("has been created"),
 				"No Assertion for 'has been created' success message");
-		System.out.println("Success message of 'has been added' is shown");
+		System.out.println("Success message of 'has been CREATED' is shown");
 	}
 
 	@Test(dataProvider = "Computer Data", priority = 2)
@@ -27,14 +27,15 @@ public class AddComputerTest extends TestBase {
 		mainComputerObj.clickonAddComputerBtn();
 		addComputerObj.addNewComputer("", introducedDate, discontinuedDate, companyOption);
 		String color = helper.colorFormatter(addComputerObj.nameRequiedLabel.getCssValue("color"));
-		System.out.println(color);
+		System.out.println("Name Field's Color formated in hex is " + color);
 		Assert.assertTrue(color.contains("#9d261d"));
+		helper.captureScreenshot(driver, "No  Name in Add Computer Page");
 		addComputerObj.addNewComputer(computerName, introducedDate, discontinuedDate, companyOption);
 		int numberAfterAdding = mainComputerObj.getComputersNumber();
 		System.out.println("Number of computers after adding is : " + numberAfterAdding);
 		Assert.assertTrue(mainComputerObj.actionSuccessMsg.getText().contains("has been created"),
 				"No Assertion for 'has been created' success message");
-		System.out.println("Success message of 'has been added' is shown");
+		System.out.println("Success message of 'has been CREATED' is shown");
 	}
 
 	@Test(dataProvider = "Computer Data", priority = 3)
@@ -44,14 +45,15 @@ public class AddComputerTest extends TestBase {
 		mainComputerObj.clickonAddComputerBtn();
 		addComputerObj.addNewComputer(computerName, newcomputerName, discontinuedDate, companyOption);
 		String color = helper.colorFormatter(addComputerObj.introduceDateMissingLabel.getCssValue("color"));
-		System.out.println(color);
+		System.out.println("Introduced Date  Field's Color formated in hex is " + color);
 		Assert.assertTrue(color.contains("#9d261d"));
+		helper.captureScreenshot(driver, "Invalid Dates in Add Computer Page");
 		addComputerObj.addNewComputer(computerName, introducedDate, discontinuedDate, companyOption);
 		int numberAfterAdding = mainComputerObj.getComputersNumber();
 		System.out.println("Number of computers after adding is : " + numberAfterAdding);
 		Assert.assertTrue(mainComputerObj.actionSuccessMsg.getText().contains("has been created"),
 				"No Assertion for 'has been created' success message");
-		System.out.println("Success message of 'has been added' is shown");
+		System.out.println("Success message of 'has been CREATED' is shown");
 	}
 
 }

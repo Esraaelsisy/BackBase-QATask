@@ -10,6 +10,9 @@ public class MainPage extends PageBase {
 		super(driver);
 	}
 
+	/*
+	 * Finding all needed WebElements in the page by their Locators
+	 */
 	@FindBy(id = "add")
 	private WebElement addComputerBtn;
 
@@ -25,12 +28,19 @@ public class MainPage extends PageBase {
 	@FindBy(xpath = "//section[@id='main']//h1")
 	public WebElement computersNumberLabel;
 
-	
-
+	/*
+	 * Function for clicking on "Add a new Computer" Button
+	 */
 	public void clickonAddComputerBtn() {
 		clickBtn(addComputerBtn);
 		System.out.println("Clicking on 'Add a new Computer Button'");
 	}
+
+	/*
+	 * Function for Searching for a computer by its name
+	 * 
+	 * @param computer name
+	 */
 
 	public void searchForComputerName(String searchValue) {
 		typeInTxtBox(searchTxtBox, searchValue);
@@ -38,10 +48,16 @@ public class MainPage extends PageBase {
 		System.out.println("Searching for computer name :  " + searchValue);
 	}
 
+	/*
+	 * Function for getting Total number of added computers till now From the header
+	 * label in Main Page
+	 * 
+	 */
 	public int getComputersNumber() {
 		System.out.println(computersNumberLabel.getText());
 		String[] computersNum = computersNumberLabel.getText().split(" ");
 		int number = new Integer(computersNum[0]);
+		System.out.println("Number of computer Found now is :  " + number);
 		return number;
 
 	}
