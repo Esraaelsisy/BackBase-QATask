@@ -3,6 +3,12 @@
 
 	<test name="Chrome Testing" preserve-order="false">
 		<parameter name="browser" value="chrome" />
+		<groups>
+			<run>
+				<include name="Regression" />
+			</run>
+		</groups>
+
 		<classes>
 			<class name="tests.AddComputerTest" />
 			<class name="tests.EditComputerTest" />
@@ -15,6 +21,12 @@
 
 	<test name="Firefox Testing" preserve-order="false">
 		<parameter name="browser" value="firefox" />
+		<groups>
+			<run>
+				<include name="Regression" />
+			</run>
+		</groups>
+
 		<classes>
 			<class name="tests.AddComputerTest" />
 			<class name="tests.EditComputerTest" />

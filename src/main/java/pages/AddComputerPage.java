@@ -6,6 +6,10 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class AddComputerPage extends PageBase {
+	/**
+	 * Page Class for the Add computer page  
+	 * @param driver
+	 */
 
 	public AddComputerPage(WebDriver driver) {
 		super(driver);
@@ -82,13 +86,18 @@ public class AddComputerPage extends PageBase {
 
 		System.out.println("User canceled the adding of computer data successfully");
 	}
+	/*
+	 * Function for getting Css value of color of Label
+	 */
 
 	public String getColorOfNameRequiredLabel() {
 		wait.until(ExpectedConditions.visibilityOf(nameRequiedLabel));
 		String color = nameRequiedLabel.getCssValue("color");
 		return color;
 	}
-
+	/*
+	 * Function for getting Css value of color of Label
+	 */
 	public String getColorofDateFormatLabel() {
 		wait.until(ExpectedConditions.visibilityOf(introduceDateMissingLabel));
 		String color = introduceDateMissingLabel.getCssValue("color");

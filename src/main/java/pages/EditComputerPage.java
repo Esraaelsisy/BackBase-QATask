@@ -7,6 +7,10 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 
 public class EditComputerPage extends PageBase {
+	/**
+	 * Page Class for the Edit computer page  
+	 * @param driver
+	 */
 
 	public EditComputerPage(WebDriver driver) {
 		super(driver);
@@ -105,6 +109,9 @@ public class EditComputerPage extends PageBase {
 		System.out.println("Computer has been deleted successfully");
 	}
 
+	/*
+	 * Function for canceling Editing of computer data
+	 */
 	public void cancelediting() {
 		System.out.println("User will cancel the editing of computer data");
 
@@ -113,6 +120,8 @@ public class EditComputerPage extends PageBase {
 
 		System.out.println("User canceled the editing of computer data successfully");
 	}
+	
+	/*** Retrieving Computer Data from the Edit Computer Page ***/
 
 	public String getComputerName() {
 		wait.until(ExpectedConditions.visibilityOf(nameTxtBox));
@@ -142,13 +151,20 @@ public class EditComputerPage extends PageBase {
 
 		return elementSelect.getFirstSelectedOption().getText();
 	}
+	
 
+	/*
+	 * Function for getting Css value of color of Label
+	 */
 	public String getColorOfNameRequiredLabel() {
 		wait.until(ExpectedConditions.visibilityOf(nameRequiedLabel));
 		String color = nameRequiedLabel.getCssValue("color");
 		return color;
 	}
 
+	/*
+	 * Function for getting Css value of color of Label
+	 */
 	public String getColorofDateFormatLabel() {
 		wait.until(ExpectedConditions.visibilityOf(introduceDateMissingLabel));
 		String color = introduceDateMissingLabel.getCssValue("color");

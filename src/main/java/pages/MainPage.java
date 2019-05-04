@@ -6,6 +6,10 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class MainPage extends PageBase {
+	/**
+	 * Page Class for the Home page  
+	 * @param driver
+	 */
 
 	public MainPage(WebDriver driver) {
 		super(driver);
@@ -22,7 +26,10 @@ public class MainPage extends PageBase {
 
 	@FindBy(id = "searchsubmit")
 	private WebElement searchSubmitBtn;
-
+	
+	@FindBy(id = "//header//a")
+	private WebElement mainPageDirectionLink;
+	
 	@FindBy(css = "div.alert-message.warning")
 	private WebElement actionSuccessMsg;
 
@@ -74,6 +81,10 @@ public class MainPage extends PageBase {
 
 	}
 
+	/*
+	 * Function for getting Text From the header label in Main Page
+	 * 
+	 */
 	public String getComputersNumbersText() {
 		wait.until(ExpectedConditions.visibilityOf(computersNumberLabel));
 		String text = computersNumberLabel.getText();
@@ -81,6 +92,9 @@ public class MainPage extends PageBase {
 		return text;
 
 	}
+	/*
+	 * Function for getting the Action Success Message shown in Main Page
+	 */
 
 	public String getSuccessMsg() {
 		wait.until(ExpectedConditions.visibilityOf(actionSuccessMsg));
@@ -88,5 +102,13 @@ public class MainPage extends PageBase {
 		System.out.println("Header Text is  " + text);
 		return text;
 
+	}
+	
+	
+	public void mainPageDirection()
+	{
+		wait.until(ExpectedConditions.visibilityOf(mainPageDirectionLink));
+		clickBtn(mainPageDirectionLink);
+		System.out.println("Clicking on Main Page Link from the header");
 	}
 }
