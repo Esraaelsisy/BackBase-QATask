@@ -38,10 +38,10 @@ public class EditComputerPage extends PageBase {
 	private WebElement deleteComputerBtn;
 
 	@FindBy(xpath = "//div[@class='input']//span[@class='help-inline' and text()='Required']")
-	public WebElement nameRequiedLabel;
+	private WebElement nameRequiedLabel;
 
 	@FindBy(xpath = "//div[@class='input']//span[@class='help-inline'and contains(text() , 'Date' )][1]")
-	public WebElement introduceDateMissingLabel;
+	private WebElement introduceDateMissingLabel;
 
 	/*
 	 * Function for Editing a saved computer with all data
@@ -141,6 +141,19 @@ public class EditComputerPage extends PageBase {
 		System.out.println("Company  Selection shown is :  " + elementSelect.getFirstSelectedOption().getText());
 
 		return elementSelect.getFirstSelectedOption().getText();
+	}
+
+	public String getColorOfNameRequiredLabel() {
+		wait.until(ExpectedConditions.visibilityOf(nameRequiedLabel));
+		String color = nameRequiedLabel.getCssValue("color");
+		return color;
+	}
+
+	public String getColorofDateFormatLabel() {
+		wait.until(ExpectedConditions.visibilityOf(introduceDateMissingLabel));
+		String color = introduceDateMissingLabel.getCssValue("color");
+		return color;
+
 	}
 
 }

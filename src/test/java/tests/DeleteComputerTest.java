@@ -21,7 +21,7 @@ public class DeleteComputerTest extends TestBase {
 			addComputerObj.addNewComputer(computerName, introducedDate, discontinuedDate, companyOption);
 			int numberAfterAdding = mainComputerObj.getComputersNumber();
 			System.out.println("Number of computers after adding is : " + numberAfterAdding);
-			Assert.assertTrue(mainComputerObj.actionSuccessMsg.getText().contains("has been created"),
+			Assert.assertTrue(mainComputerObj.getSuccessMsg().contains("has been created"),
 					"No Assertion for 'has been created' success message");
 			System.out.println("Success message of 'has been added' is shown");
 			Assert.assertTrue(numberAfterAdding == (numberBeforeAdding + 1),
@@ -31,7 +31,7 @@ public class DeleteComputerTest extends TestBase {
 			Assert.assertTrue(searchResultsObj.getComputerName().contains(computerName));
 			searchResultsObj.selectingFirstRowinSearchResults();
 			editComputerObj.deleteSavedComputer();
-			Assert.assertTrue(mainComputerObj.actionSuccessMsg.getText().contains("has been deleted"),
+			Assert.assertTrue(mainComputerObj.getSuccessMsg().contains("has been deleted"),
 					"No Assertion for 'has been deleted' success message");
 			System.out.println("Success message of 'has been deleted' is shown");
 		} catch (Exception e) {

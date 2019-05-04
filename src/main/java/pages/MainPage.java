@@ -24,10 +24,10 @@ public class MainPage extends PageBase {
 	private WebElement searchSubmitBtn;
 
 	@FindBy(css = "div.alert-message.warning")
-	public WebElement actionSuccessMsg;
+	private WebElement actionSuccessMsg;
 
 	@FindBy(xpath = "//section[@id='main']//h1")
-	public WebElement computersNumberLabel;
+	private WebElement computersNumberLabel;
 
 	/*
 	 * Function for clicking on "Add a new Computer" Button
@@ -74,4 +74,19 @@ public class MainPage extends PageBase {
 
 	}
 
+	public String getComputersNumbersText() {
+		wait.until(ExpectedConditions.visibilityOf(computersNumberLabel));
+		String text = computersNumberLabel.getText();
+		System.out.println("Header Text is  " + text);
+		return text;
+
+	}
+
+	public String getSuccessMsg() {
+		wait.until(ExpectedConditions.visibilityOf(actionSuccessMsg));
+		String text = actionSuccessMsg.getText();
+		System.out.println("Header Text is  " + text);
+		return text;
+
+	}
 }

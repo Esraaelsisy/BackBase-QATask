@@ -72,6 +72,7 @@ public class TestBase {
 
 	@BeforeMethod
 	public void initiatingPageObjects() {
+		
 		addComputerObj = new AddComputerPage(driver);
 		mainComputerObj = new MainPage(driver);
 		editComputerObj = new EditComputerPage(driver);

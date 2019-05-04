@@ -20,7 +20,7 @@ public class ViewComputerDataTest extends TestBase {
 			addComputerObj.addNewComputer(computerName, introducedDate, discontinuedDate, companyOption);
 			int numberAfterAdding = mainComputerObj.getComputersNumber();
 			System.out.println("Number of computers after adding is : " + numberAfterAdding);
-			Assert.assertTrue(mainComputerObj.actionSuccessMsg.getText().contains("has been created"),
+			Assert.assertTrue(mainComputerObj.getSuccessMsg().contains("has been created"),
 					"No Assertion for 'has been created' success message");
 			System.out.println("Success message of 'has been added' is shown");
 			mainComputerObj.searchForComputerName(computerName);
@@ -63,7 +63,7 @@ public class ViewComputerDataTest extends TestBase {
 			addComputerObj.addNewComputer(computerName, introducedDate, discontinuedDate, companyOption);
 			int numberAfterAdding = mainComputerObj.getComputersNumber();
 			System.out.println("Number of computers after adding is : " + numberAfterAdding);
-			Assert.assertTrue(mainComputerObj.actionSuccessMsg.getText().contains("has been created"),
+			Assert.assertTrue(mainComputerObj.getSuccessMsg().contains("has been created"),
 					"No Assertion for 'has been created' success message");
 			System.out.println("Success message of 'has been added' is shown");
 			mainComputerObj.searchForComputerName(computerName);

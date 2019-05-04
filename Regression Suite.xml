@@ -1,13 +1,28 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Regression Suite">
-	<parameter name="browser" value="chrome" />
+<suite name="Regression Suite" parallel="tests" thread-count="1">
+
 	<test name="Chrome Testing" preserve-order="false">
+		<parameter name="browser" value="chrome" />
 		<classes>
 			<class name="tests.AddComputerTest" />
-			<class name="tests.SearchForComputerTest" />
 			<class name="tests.EditComputerTest" />
 			<class name="tests.DeleteComputerTest" />
+			<class name="tests.SearchForComputerTest" />
 			<class name="tests.ViewComputerDataTest" />
+
 		</classes>
 	</test>
+
+	<test name="Firefox Testing" preserve-order="false">
+		<parameter name="browser" value="firefox" />
+		<classes>
+			<class name="tests.AddComputerTest" />
+			<class name="tests.EditComputerTest" />
+			<class name="tests.DeleteComputerTest" />
+			<class name="tests.SearchForComputerTest" />
+			<class name="tests.ViewComputerDataTest" />
+
+		</classes>
+	</test>
+
 </suite> 

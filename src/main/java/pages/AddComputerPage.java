@@ -33,10 +33,10 @@ public class AddComputerPage extends PageBase {
 	private WebElement cancelBtn;
 
 	@FindBy(xpath = "//div[@class='input']//span[@class='help-inline' and text()='Required']")
-	public WebElement nameRequiedLabel;
+	private WebElement nameRequiedLabel;
 
 	@FindBy(xpath = "//div[@class='input']//span[@class='help-inline'and contains(text() , 'Date' )][1]")
-	public WebElement introduceDateMissingLabel;
+	private WebElement introduceDateMissingLabel;
 
 	/*
 	 * Function for Adding a new computer with all data needed
@@ -81,5 +81,18 @@ public class AddComputerPage extends PageBase {
 		clickBtn(cancelBtn);
 
 		System.out.println("User canceled the adding of computer data successfully");
+	}
+
+	public String getColorOfNameRequiredLabel() {
+		wait.until(ExpectedConditions.visibilityOf(nameRequiedLabel));
+		String color = nameRequiedLabel.getCssValue("color");
+		return color;
+	}
+
+	public String getColorofDateFormatLabel() {
+		wait.until(ExpectedConditions.visibilityOf(introduceDateMissingLabel));
+		String color = introduceDateMissingLabel.getCssValue("color");
+		return color;
+
 	}
 }
