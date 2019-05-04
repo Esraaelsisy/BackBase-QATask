@@ -3,6 +3,7 @@ package pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class MainPage extends PageBase {
 
@@ -11,7 +12,7 @@ public class MainPage extends PageBase {
 	}
 
 	/*
-	 * Finding all needed WebElements in the page by their Locators
+	 * Finding all needed WebElements in the MAIN page by their Locators
 	 */
 	@FindBy(id = "add")
 	private WebElement addComputerBtn;
@@ -32,8 +33,12 @@ public class MainPage extends PageBase {
 	 * Function for clicking on "Add a new Computer" Button
 	 */
 	public void clickonAddComputerBtn() {
+		System.out.println("User will click on 'Add a new Computer Button'");
+
+		wait.until(ExpectedConditions.visibilityOf(addComputerBtn));
 		clickBtn(addComputerBtn);
-		System.out.println("Clicking on 'Add a new Computer Button'");
+
+		System.out.println("User clicked on 'Add a new Computer Button' successfully");
 	}
 
 	/*
@@ -43,9 +48,15 @@ public class MainPage extends PageBase {
 	 */
 
 	public void searchForComputerName(String searchValue) {
+		System.out.println("User will search for computer name :  " + searchValue);
+
+		wait.until(ExpectedConditions.visibilityOf(searchTxtBox));
 		typeInTxtBox(searchTxtBox, searchValue);
+
+		wait.until(ExpectedConditions.visibilityOf(searchSubmitBtn));
 		clickBtn(searchSubmitBtn);
-		System.out.println("Searching for computer name :  " + searchValue);
+
+		System.out.println("User searched for computer name :  " + searchValue + " successfully");
 	}
 
 	/*
@@ -54,10 +65,11 @@ public class MainPage extends PageBase {
 	 * 
 	 */
 	public int getComputersNumber() {
-		System.out.println(computersNumberLabel.getText());
+		wait.until(ExpectedConditions.visibilityOf(computersNumberLabel));
+		System.out.println("Header Text is  " + computersNumberLabel.getText());
 		String[] computersNum = computersNumberLabel.getText().split(" ");
 		int number = new Integer(computersNum[0]);
-		System.out.println("Number of computer Found now is :  " + number);
+		System.out.println("Number of computers Found now is :  " + number);
 		return number;
 
 	}
