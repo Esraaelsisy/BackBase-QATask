@@ -1,5 +1,6 @@
 # BackBase-QATask
-Selenium Framework project using Java , Maven , TestNG  , Cucumber with applying Page Object Model and Behavior Driven Development
+Selenium Framework project using Java , Maven , TestNG  , Cucumber with applying Page Object Model and Behavior Driven Development.
+This framework is developed for Regression Testing scope on Both Chrome and Firefox browsers  on Windows OS
 
 # Project Packages
 Project consists of 7 packages as the following:
@@ -10,7 +11,7 @@ Project consists of 7 packages as the following:
 "tests": This package contains of "TestBase" class which starts and stops the WebDriver for each <Test> tag in TestNG xml file. 
     Besides , Test Classes which have the Independent Test scenarios mapped with the methods from page objects , with an inheritance from "TestBase" superclass 
   
-"utilities": This package contains of "helper" class that has all the handler functions needed through the test classes
+"utilities": This package contains of "helper" class that has all the handler functions needed through the test classes , like : Date formatting , Taking screenshots and Colors formatting
 
 "data" :  This package contains JSON File contains computer Data and JSON File reader to get Data from the JSON file
 
