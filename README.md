@@ -3,7 +3,7 @@ Selenium Framework project using Java , Maven , TestNG  , Cucumber with applying
 
 # Description 
 Selenium Framework project using Java , Maven , TestNG  , Cucumber with applying Page Object Model and Behavior Driven Development.
-This framework is developed for Regression Testing scope of the CURD Functions of "http://computer-database.herokuapp.com/computers" on Both Chrome and Firefox browsers on Windows OS
+This framework is developed for Regression Testing scope of the CURD Functions of "https://computer-database.herokuapp.com/computers" on Both Chrome and Firefox browsers on Windows OS
 
 # How to run? 
 There are several ways to run the code after importing the project:
