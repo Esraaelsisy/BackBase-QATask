@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="28" total="48" passed="20">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Regression Suite" duration-ms="111485" started-at="2019-05-05T11:35:04Z" finished-at="2019-05-05T11:36:56Z">
+    <groups>
+      <group name="Regression">
+        <method signature="AddComputerTest.userCanAddNewComputer()[pri:1, instance:tests.AddComputerTest@26f67b76]" name="userCanAddNewComputer" class="tests.AddComputerTest"/>
+        <method signature="AddComputerTest.userCannotAddComputerWithoutName()[pri:2, instance:tests.AddComputerTest@26f67b76]" name="userCannotAddComputerWithoutName" class="tests.AddComputerTest"/>
+        <method signature="DeleteComputerTest.userCanDeleteComputer()[pri:0, instance:tests.DeleteComputerTest@7f560810]" name="userCanDeleteComputer" class="tests.DeleteComputerTest"/>
+        <method signature="EditComputerTest.userCanEditComputerName()[pri:1, instance:tests.EditComputerTest@153f5a29]" name="userCanEditComputerName" class="tests.EditComputerTest"/>
+        <method signature="EditComputerTest.userCanEditSavedComputerData()[pri:2, instance:tests.EditComputerTest@153f5a29]" name="userCanEditSavedComputerData" class="tests.EditComputerTest"/>
+        <method signature="EditComputerTest.userCannotEditComputerWithoutName()[pri:3, instance:tests.EditComputerTest@153f5a29]" name="userCannotEditComputerWithoutName" class="tests.EditComputerTest"/>
+        <method signature="SearchForComputerTest.userCanSearchForComputerName()[pri:1, instance:tests.SearchForComputerTest@69d9c55]" name="userCanSearchForComputerName" class="tests.SearchForComputerTest"/>
+        <method signature="SearchForComputerTest.usercannotFindDeletedUniqueComputerName()[pri:2, instance:tests.SearchForComputerTest@69d9c55]" name="usercannotFindDeletedUniqueComputerName" class="tests.SearchForComputerTest"/>
+        <method signature="ViewComputerDataTest.userCanViewComputerDataInEditPage()[pri:2, instance:tests.ViewComputerDataTest@13a57a3b]" name="userCanViewComputerDataInEditPage" class="tests.ViewComputerDataTest"/>
+        <method signature="ViewComputerDataTest.userCanViewComputerDataInSearchResults()[pri:1, instance:tests.ViewComputerDataTest@13a57a3b]" name="userCanViewComputerDataInSearchResults" class="tests.ViewComputerDataTest"/>
+        <method signature="AddComputerTest.userCanAddNewComputer()[pri:1, instance:tests.AddComputerTest@50c87b21]" name="userCanAddNewComputer" class="tests.AddComputerTest"/>
+        <method signature="AddComputerTest.userCannotAddComputerWithoutName()[pri:2, instance:tests.AddComputerTest@50c87b21]" name="userCannotAddComputerWithoutName" class="tests.AddComputerTest"/>
+        <method signature="DeleteComputerTest.userCanDeleteComputer()[pri:0, instance:tests.DeleteComputerTest@1810399e]" name="userCanDeleteComputer" class="tests.DeleteComputerTest"/>
+        <method signature="EditComputerTest.userCanEditComputerName()[pri:1, instance:tests.EditComputerTest@5f375618]" name="userCanEditComputerName" class="tests.EditComputerTest"/>
+        <method signature="EditComputerTest.userCanEditSavedComputerData()[pri:2, instance:tests.EditComputerTest@5f375618]" name="userCanEditSavedComputerData" class="tests.EditComputerTest"/>
+        <method signature="EditComputerTest.userCannotEditComputerWithoutName()[pri:3, instance:tests.EditComputerTest@5f375618]" name="userCannotEditComputerWithoutName" class="tests.EditComputerTest"/>
+        <method signature="SearchForComputerTest.userCanSearchForComputerName()[pri:1, instance:tests.SearchForComputerTest@32d992b2]" name="userCanSearchForComputerName" class="tests.SearchForComputerTest"/>
+        <method signature="SearchForComputerTest.usercannotFindDeletedUniqueComputerName()[pri:2, instance:tests.SearchForComputerTest@32d992b2]" name="usercannotFindDeletedUniqueComputerName" class="tests.SearchForComputerTest"/>
+        <method signature="ViewComputerDataTest.userCanViewComputerDataInEditPage()[pri:2, instance:tests.ViewComputerDataTest@215be6bb]" name="userCanViewComputerDataInEditPage" class="tests.ViewComputerDataTest"/>
+        <method signature="ViewComputerDataTest.userCanViewComputerDataInSearchResults()[pri:1, instance:tests.ViewComputerDataTest@215be6bb]" name="userCanViewComputerDataInSearchResults" class="tests.ViewComputerDataTest"/>
+      </group> <!-- Regression -->
+    </groups>
+    <test name="Chrome Testing" duration-ms="53501" started-at="2019-05-05T11:35:04Z" finished-at="2019-05-05T11:35:58Z">
+      <class name="tests.EditComputerTest">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:tests.EditComputerTest@153f5a29]" name="setUpClass" is-config="true" duration-ms="20" started-at="2019-05-05T11:35:23Z" finished-at="2019-05-05T11:35:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="RetrievingDatafromJSON()[pri:0, instance:tests.EditComputerTest@153f5a29]" name="RetrievingDatafromJSON" is-config="true" duration-ms="1" started-at="2019-05-05T11:35:23Z" finished-at="2019-05-05T11:35:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RetrievingDatafromJSON -->
+        <test-method status="PASS" signature="initiatingPageObjects()[pri:0, instance:tests.EditComputerTest@153f5a29]" name="initiatingPageObjects" is-config="true" duration-ms="2" started-at="2019-05-05T11:35:23Z" finished-at="2019-05-05T11:35:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initiatingPageObjects -->
+        <test-method status="PASS" signature="userCanEditComputerName()[pri:1, instance:tests.EditComputerTest@153f5a29]" name="userCanEditComputerName" duration-ms="3411" started-at="2019-05-05T11:35:23Z" finished-at="2019-05-05T11:35:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- userCanEditComputerName -->
+        <test-method status="PASS" signature="screeshotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.EditComputerTest@153f5a29]" name="screeshotOnFailure" is-config="true" duration-ms="0" started-at="2019-05-05T11:35:27Z" finished-at="2019-05-05T11:35:27Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=userCanEditComputerName status=SUCCESS method=EditComputerTest.userCanEditComputerName()[pri:1, instance:tests.EditComputerTest@153f5a29] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- screeshotOnFailure -->
+        <test-method status="PASS" signature="initiatingPageObjects()[pri:0, instance:tests.EditComputerTest@153f5a29]" name="initiatingPageObjects" is-config="true" duration-ms="2" started-at="2019-05-05T11:35:39Z" finished-at="2019-05-05T11:35:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initiatingPageObjects -->
+        <test-method status="PASS" signature="userCanEditSavedComputerData()[pri:2, instance:tests.EditComputerTest@153f5a29]" name="userCanEditSavedComputerData" duration-ms="3673" started-at="2019-05-05T11:35:39Z" finished-at="2019-05-05T11:35:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- userCanEditSavedComputerData -->
+        <test-method status="PASS" signature="screeshotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.EditComputerTest@153f5a29]" name="screeshotOnFailure" is-config="true" duration-ms="0" started-at="2019-05-05T11:35:43Z" finished-at="2019-05-05T11:35:43Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=userCanEditSavedComputerData status=SUCCESS method=EditComputerTest.userCanEditSavedComputerData()[pri:2, instance:tests.EditComputerTest@153f5a29] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- screeshotOnFailure -->
+        <test-method status="PASS" signature="initiatingPageObjects()[pri:0, instance:tests.EditComputerTest@153f5a29]" name="initiatingPageObjects" is-config="true" duration-ms="1" started-at="2019-05-05T11:35:51Z" finished-at="2019-05-05T11:35:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initiatingPageObjects -->
+        <test-method status="PASS" signature="userCannotEditComputerWithoutName()[pri:3, instance:tests.EditComputerTest@153f5a29]" name="userCannotEditComputerWithoutName" duration-ms="5008" started-at="2019-05-05T11:35:51Z" finished-at="2019-05-05T11:35:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- userCannotEditComputerWithoutName -->
+        <test-method status="PASS" signature="screeshotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.EditComputerTest@153f5a29]" name="screeshotOnFailure" is-config="true" duration-ms="0" started-at="2019-05-05T11:35:56Z" finished-at="2019-05-05T11:35:56Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=userCannotEditComputerWithoutName status=SUCCESS method=EditComputerTest.userCannotEditComputerWithoutName()[pri:3, instance:tests.EditComputerTest@153f5a29] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- screeshotOnFailure -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:tests.EditComputerTest@153f5a29]" name="tearDownClass" is-config="true" duration-ms="0" started-at="2019-05-05T11:35:56Z" finished-at="2019-05-05T11:35:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- tests.EditComputerTest -->
+      <class name="tests.ViewComputerDataTest">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:tests.ViewComputerDataTest@13a57a3b]" name="setUpClass" is-config="true" duration-ms="14" started-at="2019-05-05T11:35:30Z" finished-at="2019-05-05T11:35:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="initiatingPageObjects()[pri:0, instance:tests.ViewComputerDataTest@13a57a3b]" name="initiatingPageObjects" is-config="true" duration-ms="1" started-at="2019-05-05T11:35:30Z" finished-at="2019-05-05T11:35:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initiatingPageObjects -->
+        <test-method status="PASS" signature="RetrievingDatafromJSON()[pri:0, instance:tests.ViewComputerDataTest@13a57a3b]" name="RetrievingDatafromJSON" is-config="true" duration-ms="0" started-at="2019-05-05T11:35:30Z" finished-at="2019-05-05T11:35:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RetrievingDatafromJSON -->
+        <test-method status="PASS" signature="userCanViewComputerDataInSearchResults()[pri:1, instance:tests.ViewComputerDataTest@13a57a3b]" name="userCanViewComputerDataInSearchResults" duration-ms="3822" started-at="2019-05-05T11:35:30Z" finished-at="2019-05-05T11:35:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- userCanViewComputerDataInSearchResults -->
+        <test-method status="PASS" signature="screeshotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.ViewComputerDataTest@13a57a3b]" name="screeshotOnFailure" is-config="true" duration-ms="0" started-at="2019-05-05T11:35:34Z" finished-at="2019-05-05T11:35:34Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=userCanViewComputerDataInSearchResults status=SUCCESS method=ViewComputerDataTest.userCanViewComputerDataInSearchResults()[pri:1, instance:tests.ViewComputerDataTest@13a57a3b] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- screeshotOnFailure -->
+        <test-method status="PASS" signature="initiatingPageObjects()[pri:0, instance:tests.ViewComputerDataTest@13a57a3b]" name="initiatingPageObjects" is-config="true" duration-ms="1" started-at="2019-05-05T11:35:48Z" finished-at="2019-05-05T11:35:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initiatingPageObjects -->
+        <test-method status="PASS" signature="userCanViewComputerDataInEditPage()[pri:2, instance:tests.ViewComputerDataTest@13a57a3b]" name="userCanViewComputerDataInEditPage" duration-ms="3699" started-at="2019-05-05T11:35:48Z" finished-at="2019-05-05T11:35:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- userCanViewComputerDataInEditPage -->
+        <test-method status="PASS" signature="screeshotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.ViewComputerDataTest@13a57a3b]" name="screeshotOnFailure" is-config="true" duration-ms="0" started-at="2019-05-05T11:35:51Z" finished-at="2019-05-05T11:35:51Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=userCanViewComputerDataInEditPage status=SUCCESS method=ViewComputerDataTest.userCanViewComputerDataInEditPage()[pri:2, instance:tests.ViewComputerDataTest@13a57a3b] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- screeshotOnFailure -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:tests.ViewComputerDataTest@13a57a3b]" name="tearDownClass" is-config="true" duration-ms="0" started-at="2019-05-05T11:35:51Z" finished-at="2019-05-05T11:35:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- tests.ViewComputerDataTest -->
+      <class name="tests.AddComputerTest">
+        <test-method status="PASS" signature="SetUpEnvironment(java.lang.String)[pri:0, instance:tests.AddComputerTest@26f67b76]" name="SetUpEnvironment" is-config="true" duration-ms="11535" started-at="2019-05-05T11:35:04Z" finished-at="2019-05-05T11:35:16Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SetUpEnvironment -->
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:tests.AddComputerTest@26f67b76]" name="setUpClass" is-config="true" duration-ms="17" started-at="2019-05-05T11:35:22Z" finished-at="2019-05-05T11:35:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="RetrievingDatafromJSON()[pri:0, instance:tests.AddComputerTest@26f67b76]" name="RetrievingDatafromJSON" is-config="true" duration-ms="4" started-at="2019-05-05T11:35:22Z" finished-at="2019-05-05T11:35:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RetrievingDatafromJSON -->
+        <test-method status="PASS" signature="initiatingPageObjects()[pri:0, instance:tests.AddComputerTest@26f67b76]" name="initiatingPageObjects" is-config="true" duration-ms="2" started-at="2019-05-05T11:35:22Z" finished-at="2019-05-05T11:35:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initiatingPageObjects -->
+        <test-method status="PASS" signature="userCanAddNewComputer()[pri:1, instance:tests.AddComputerTest@26f67b76]" name="userCanAddNewComputer" duration-ms="1745" started-at="2019-05-05T11:35:22Z" finished-at="2019-05-05T11:35:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- userCanAddNewComputer -->
+        <test-method status="PASS" signature="screeshotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.AddComputerTest@26f67b76]" name="screeshotOnFailure" is-config="true" duration-ms="1" started-at="2019-05-05T11:35:23Z" finished-at="2019-05-05T11:35:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=userCanAddNewComputer status=SUCCESS method=AddComputerTest.userCanAddNewComputer()[pri:1, instance:tests.AddComputerTest@26f67b76] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- screeshotOnFailure -->
+        <test-method status="PASS" signature="initiatingPageObjects()[pri:0, instance:tests.AddComputerTest@26f67b76]" name="initiatingPageObjects" is-config="true" duration-ms="1" started-at="2019-05-05T11:35:34Z" finished-at="2019-05-05T11:35:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initiatingPageObjects -->
+        <test-method status="PASS" signature="userCannotAddComputerWithoutName()[pri:2, instance:tests.AddComputerTest@26f67b76]" name="userCannotAddComputerWithoutName" duration-ms="5888" started-at="2019-05-05T11:35:34Z" finished-at="2019-05-05T11:35:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- userCannotAddComputerWithoutName -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:tests.AddComputerTest@26f67b76]" name="tearDownClass" is-config="true" duration-ms="1" started-at="2019-05-05T11:35:39Z" finished-at="2019-05-05T11:35:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+        <test-method status="PASS" signature="screeshotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.AddComputerTest@26f67b76]" name="screeshotOnFailure" is-config="true" duration-ms="0" started-at="2019-05-05T11:35:39Z" finished-at="2019-05-05T11:35:39Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=userCannotAddComputerWithoutName status=SUCCESS method=AddComputerTest.userCannotAddComputerWithoutName()[pri:2, instance:tests.AddComputerTest@26f67b76] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- screeshotOnFailure -->
+        <test-method status="PASS" signature="StopDriver()[pri:0, instance:tests.AddComputerTest@26f67b76]" name="StopDriver" is-config="true" duration-ms="1208" started-at="2019-05-05T11:35:56Z" finished-at="2019-05-05T11:35:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- StopDriver -->
+      </class> <!-- tests.AddComputerTest -->
+      <class name="tests.SearchForComputerTest">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:tests.SearchForComputerTest@69d9c55]" name="setUpClass" is-config="true" duration-ms="15" started-at="2019-05-05T11:35:27Z" finished-at="2019-05-05T11:35:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="RetrievingDatafromJSON()[pri:0, instance:tests.SearchForComputerTest@69d9c55]" name="RetrievingDatafromJSON" is-config="true" duration-ms="0" started-at="2019-05-05T11:35:27Z" finished-at="2019-05-05T11:35:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RetrievingDatafromJSON -->
+        <test-method status="PASS" signature="initiatingPageObjects()[pri:0, instance:tests.SearchForComputerTest@69d9c55]" name="initiatingPageObjects" is-config="true" duration-ms="1" started-at="2019-05-05T11:35:27Z" finished-at="2019-05-05T11:35:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initiatingPageObjects -->
+        <test-method status="PASS" signature="userCanSearchForComputerName()[pri:1, instance:tests.SearchForComputerTest@69d9c55]" name="userCanSearchForComputerName" duration-ms="2972" started-at="2019-05-05T11:35:27Z" finished-at="2019-05-05T11:35:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- userCanSearchForComputerName -->
+        <test-method status="PASS" signature="screeshotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.SearchForComputerTest@69d9c55]" name="screeshotOnFailure" is-config="true" duration-ms="1" started-at="2019-05-05T11:35:30Z" finished-at="2019-05-05T11:35:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=userCanSearchForComputerName status=SUCCESS method=SearchForComputerTest.userCanSearchForComputerName()[pri:1, instance:tests.SearchForComputerTest@69d9c55] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- screeshotOnFailure -->
+        <test-method status="PASS" signature="initiatingPageObjects()[pri:0, instance:tests.SearchForComputerTest@69d9c55]" name="initiatingPageObjects" is-config="true" duration-ms="1" started-at="2019-05-05T11:35:43Z" finished-at="2019-05-05T11:35:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initiatingPageObjects -->
+        <test-method status="PASS" signature="usercannotFindDeletedUniqueComputerName()[pri:2, instance:tests.SearchForComputerTest@69d9c55]" name="usercannotFindDeletedUniqueComputerName" duration-ms="4612" started-at="2019-05-05T11:35:43Z" finished-at="2019-05-05T11:35:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- usercannotFindDeletedUniqueComputerName -->
+        <test-method status="PASS" signature="screeshotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.SearchForComputerTest@69d9c55]" name="screeshotOnFailure" is-config="true" duration-ms="0" started-at="2019-05-05T11:35:48Z" finished-at="2019-05-05T11:35:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=usercannotFindDeletedUniqueComputerName status=SUCCESS method=SearchForComputerTest.usercannotFindDeletedUniqueComputerName()[pri:2, instance:tests.SearchForComputerTest@69d9c55] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- screeshotOnFailure -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:tests.SearchForComputerTest@69d9c55]" name="tearDownClass" is-config="true" duration-ms="3" started-at="2019-05-05T11:35:48Z" finished-at="2019-05-05T11:35:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- tests.SearchForComputerTest -->
+      <class name="tests.DeleteComputerTest">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:tests.DeleteComputerTest@7f560810]" name="setUpClass" is-config="true" duration-ms="554" started-at="2019-05-05T11:35:16Z" finished-at="2019-05-05T11:35:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="RetrievingDatafromJSON()[pri:0, instance:tests.DeleteComputerTest@7f560810]" name="RetrievingDatafromJSON" is-config="true" duration-ms="35" started-at="2019-05-05T11:35:16Z" finished-at="2019-05-05T11:35:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RetrievingDatafromJSON -->
+        <test-method status="PASS" signature="initiatingPageObjects()[pri:0, instance:tests.DeleteComputerTest@7f560810]" name="initiatingPageObjects" is-config="true" duration-ms="154" started-at="2019-05-05T11:35:16Z" finished-at="2019-05-05T11:35:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initiatingPageObjects -->
+        <test-method status="PASS" signature="userCanDeleteComputer()[pri:0, instance:tests.DeleteComputerTest@7f560810]" name="userCanDeleteComputer" duration-ms="4919" started-at="2019-05-05T11:35:17Z" finished-at="2019-05-05T11:35:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- userCanDeleteComputer -->
+        <test-method status="PASS" signature="screeshotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.DeleteComputerTest@7f560810]" name="screeshotOnFailure" is-config="true" duration-ms="1" started-at="2019-05-05T11:35:21Z" finished-at="2019-05-05T11:35:21Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=userCanDeleteComputer status=SUCCESS method=DeleteComputerTest.userCanDeleteComputer()[pri:0, instance:tests.DeleteComputerTest@7f560810] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- screeshotOnFailure -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:tests.DeleteComputerTest@7f560810]" name="tearDownClass" is-config="true" duration-ms="120" started-at="2019-05-05T11:35:21Z" finished-at="2019-05-05T11:35:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- tests.DeleteComputerTest -->
+    </test> <!-- Chrome Testing -->
+    <test name="Firefox Testing" duration-ms="57316" started-at="2019-05-05T11:35:58Z" finished-at="2019-05-05T11:36:56Z">
+      <class name="tests.EditComputerTest">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:tests.EditComputerTest@5f375618]" name="setUpClass" is-config="true" duration-ms="13" started-at="2019-05-05T11:36:22Z" finished-at="2019-05-05T11:36:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="RetrievingDatafromJSON()[pri:0, instance:tests.EditComputerTest@5f375618]" name="RetrievingDatafromJSON" is-config="true" duration-ms="1" started-at="2019-05-05T11:36:22Z" finished-at="2019-05-05T11:36:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RetrievingDatafromJSON -->
+        <test-method status="PASS" signature="initiatingPageObjects()[pri:0, instance:tests.EditComputerTest@5f375618]" name="initiatingPageObjects" is-config="true" duration-ms="1" started-at="2019-05-05T11:36:22Z" finished-at="2019-05-05T11:36:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initiatingPageObjects -->
+        <test-method status="PASS" signature="userCanEditComputerName()[pri:1, instance:tests.EditComputerTest@5f375618]" name="userCanEditComputerName" duration-ms="3890" started-at="2019-05-05T11:36:22Z" finished-at="2019-05-05T11:36:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- userCanEditComputerName -->
+        <test-method status="PASS" signature="screeshotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.EditComputerTest@5f375618]" name="screeshotOnFailure" is-config="true" duration-ms="0" started-at="2019-05-05T11:36:26Z" finished-at="2019-05-05T11:36:26Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=userCanEditComputerName status=SUCCESS method=EditComputerTest.userCanEditComputerName()[pri:1, instance:tests.EditComputerTest@5f375618] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- screeshotOnFailure -->
+        <test-method status="PASS" signature="initiatingPageObjects()[pri:0, instance:tests.EditComputerTest@5f375618]" name="initiatingPageObjects" is-config="true" duration-ms="1" started-at="2019-05-05T11:36:35Z" finished-at="2019-05-05T11:36:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initiatingPageObjects -->
+        <test-method status="PASS" signature="userCanEditSavedComputerData()[pri:2, instance:tests.EditComputerTest@5f375618]" name="userCanEditSavedComputerData" duration-ms="6483" started-at="2019-05-05T11:36:35Z" finished-at="2019-05-05T11:36:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- userCanEditSavedComputerData -->
+        <test-method status="PASS" signature="screeshotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.EditComputerTest@5f375618]" name="screeshotOnFailure" is-config="true" duration-ms="0" started-at="2019-05-05T11:36:42Z" finished-at="2019-05-05T11:36:42Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=userCanEditSavedComputerData status=SUCCESS method=EditComputerTest.userCanEditSavedComputerData()[pri:2, instance:tests.EditComputerTest@5f375618] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- screeshotOnFailure -->
+        <test-method status="PASS" signature="initiatingPageObjects()[pri:0, instance:tests.EditComputerTest@5f375618]" name="initiatingPageObjects" is-config="true" duration-ms="1" started-at="2019-05-05T11:36:48Z" finished-at="2019-05-05T11:36:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initiatingPageObjects -->
+        <test-method status="PASS" signature="userCannotEditComputerWithoutName()[pri:3, instance:tests.EditComputerTest@5f375618]" name="userCannotEditComputerWithoutName" duration-ms="4218" started-at="2019-05-05T11:36:48Z" finished-at="2019-05-05T11:36:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- userCannotEditComputerWithoutName -->
+        <test-method status="PASS" signature="screeshotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.EditComputerTest@5f375618]" name="screeshotOnFailure" is-config="true" duration-ms="1" started-at="2019-05-05T11:36:52Z" finished-at="2019-05-05T11:36:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=userCannotEditComputerWithoutName status=SUCCESS method=EditComputerTest.userCannotEditComputerWithoutName()[pri:3, instance:tests.EditComputerTest@5f375618] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- screeshotOnFailure -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:tests.EditComputerTest@5f375618]" name="tearDownClass" is-config="true" duration-ms="0" started-at="2019-05-05T11:36:52Z" finished-at="2019-05-05T11:36:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- tests.EditComputerTest -->
+      <class name="tests.ViewComputerDataTest">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:tests.ViewComputerDataTest@215be6bb]" name="setUpClass" is-config="true" duration-ms="17" started-at="2019-05-05T11:36:29Z" finished-at="2019-05-05T11:36:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="RetrievingDatafromJSON()[pri:0, instance:tests.ViewComputerDataTest@215be6bb]" name="RetrievingDatafromJSON" is-config="true" duration-ms="1" started-at="2019-05-05T11:36:29Z" finished-at="2019-05-05T11:36:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RetrievingDatafromJSON -->
+        <test-method status="PASS" signature="initiatingPageObjects()[pri:0, instance:tests.ViewComputerDataTest@215be6bb]" name="initiatingPageObjects" is-config="true" duration-ms="1" started-at="2019-05-05T11:36:29Z" finished-at="2019-05-05T11:36:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initiatingPageObjects -->
+        <test-method status="PASS" signature="userCanViewComputerDataInSearchResults()[pri:1, instance:tests.ViewComputerDataTest@215be6bb]" name="userCanViewComputerDataInSearchResults" duration-ms="3626" started-at="2019-05-05T11:36:29Z" finished-at="2019-05-05T11:36:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- userCanViewComputerDataInSearchResults -->
+        <test-method status="PASS" signature="screeshotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.ViewComputerDataTest@215be6bb]" name="screeshotOnFailure" is-config="true" duration-ms="0" started-at="2019-05-05T11:36:33Z" finished-at="2019-05-05T11:36:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=userCanViewComputerDataInSearchResults status=SUCCESS method=ViewComputerDataTest.userCanViewComputerDataInSearchResults()[pri:1, instance:tests.ViewComputerDataTest@215be6bb] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- screeshotOnFailure -->
+        <test-method status="PASS" signature="userCanViewComputerDataInEditPage()[pri:2, instance:tests.ViewComputerDataTest@215be6bb]" name="userCanViewComputerDataInEditPage" duration-ms="3024" started-at="2019-05-05T11:36:45Z" finished-at="2019-05-05T11:36:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- userCanViewComputerDataInEditPage -->
+        <test-method status="PASS" signature="initiatingPageObjects()[pri:0, instance:tests.ViewComputerDataTest@215be6bb]" name="initiatingPageObjects" is-config="true" duration-ms="0" started-at="2019-05-05T11:36:45Z" finished-at="2019-05-05T11:36:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initiatingPageObjects -->
+        <test-method status="PASS" signature="screeshotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.ViewComputerDataTest@215be6bb]" name="screeshotOnFailure" is-config="true" duration-ms="0" started-at="2019-05-05T11:36:48Z" finished-at="2019-05-05T11:36:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=userCanViewComputerDataInEditPage status=SUCCESS method=ViewComputerDataTest.userCanViewComputerDataInEditPage()[pri:2, instance:tests.ViewComputerDataTest@215be6bb] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- screeshotOnFailure -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:tests.ViewComputerDataTest@215be6bb]" name="tearDownClass" is-config="true" duration-ms="0" started-at="2019-05-05T11:36:48Z" finished-at="2019-05-05T11:36:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- tests.ViewComputerDataTest -->
+      <class name="tests.AddComputerTest">
+        <test-method status="PASS" signature="SetUpEnvironment(java.lang.String)[pri:0, instance:tests.AddComputerTest@50c87b21]" name="SetUpEnvironment" is-config="true" duration-ms="17038" started-at="2019-05-05T11:35:58Z" finished-at="2019-05-05T11:36:15Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SetUpEnvironment -->
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:tests.AddComputerTest@50c87b21]" name="setUpClass" is-config="true" duration-ms="11" started-at="2019-05-05T11:36:20Z" finished-at="2019-05-05T11:36:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="RetrievingDatafromJSON()[pri:0, instance:tests.AddComputerTest@50c87b21]" name="RetrievingDatafromJSON" is-config="true" duration-ms="0" started-at="2019-05-05T11:36:20Z" finished-at="2019-05-05T11:36:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RetrievingDatafromJSON -->
+        <test-method status="PASS" signature="initiatingPageObjects()[pri:0, instance:tests.AddComputerTest@50c87b21]" name="initiatingPageObjects" is-config="true" duration-ms="1" started-at="2019-05-05T11:36:20Z" finished-at="2019-05-05T11:36:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initiatingPageObjects -->
+        <test-method status="PASS" signature="userCanAddNewComputer()[pri:1, instance:tests.AddComputerTest@50c87b21]" name="userCanAddNewComputer" duration-ms="2406" started-at="2019-05-05T11:36:20Z" finished-at="2019-05-05T11:36:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- userCanAddNewComputer -->
+        <test-method status="PASS" signature="screeshotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.AddComputerTest@50c87b21]" name="screeshotOnFailure" is-config="true" duration-ms="0" started-at="2019-05-05T11:36:22Z" finished-at="2019-05-05T11:36:22Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=userCanAddNewComputer status=SUCCESS method=AddComputerTest.userCanAddNewComputer()[pri:1, instance:tests.AddComputerTest@50c87b21] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- screeshotOnFailure -->
+        <test-method status="PASS" signature="initiatingPageObjects()[pri:0, instance:tests.AddComputerTest@50c87b21]" name="initiatingPageObjects" is-config="true" duration-ms="1" started-at="2019-05-05T11:36:33Z" finished-at="2019-05-05T11:36:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initiatingPageObjects -->
+        <test-method status="PASS" signature="userCannotAddComputerWithoutName()[pri:2, instance:tests.AddComputerTest@50c87b21]" name="userCannotAddComputerWithoutName" duration-ms="2602" started-at="2019-05-05T11:36:33Z" finished-at="2019-05-05T11:36:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- userCannotAddComputerWithoutName -->
+        <test-method status="PASS" signature="screeshotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.AddComputerTest@50c87b21]" name="screeshotOnFailure" is-config="true" duration-ms="1" started-at="2019-05-05T11:36:35Z" finished-at="2019-05-05T11:36:35Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=userCannotAddComputerWithoutName status=SUCCESS method=AddComputerTest.userCannotAddComputerWithoutName()[pri:2, instance:tests.AddComputerTest@50c87b21] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- screeshotOnFailure -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:tests.AddComputerTest@50c87b21]" name="tearDownClass" is-config="true" duration-ms="0" started-at="2019-05-05T11:36:35Z" finished-at="2019-05-05T11:36:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+        <test-method status="PASS" signature="StopDriver()[pri:0, instance:tests.AddComputerTest@50c87b21]" name="StopDriver" is-config="true" duration-ms="3309" started-at="2019-05-05T11:36:52Z" finished-at="2019-05-05T11:36:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- StopDriver -->
+      </class> <!-- tests.AddComputerTest -->
+      <class name="tests.SearchForComputerTest">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:tests.SearchForComputerTest@32d992b2]" name="setUpClass" is-config="true" duration-ms="10" started-at="2019-05-05T11:36:26Z" finished-at="2019-05-05T11:36:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="initiatingPageObjects()[pri:0, instance:tests.SearchForComputerTest@32d992b2]" name="initiatingPageObjects" is-config="true" duration-ms="1" started-at="2019-05-05T11:36:26Z" finished-at="2019-05-05T11:36:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initiatingPageObjects -->
+        <test-method status="PASS" signature="RetrievingDatafromJSON()[pri:0, instance:tests.SearchForComputerTest@32d992b2]" name="RetrievingDatafromJSON" is-config="true" duration-ms="0" started-at="2019-05-05T11:36:26Z" finished-at="2019-05-05T11:36:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RetrievingDatafromJSON -->
+        <test-method status="PASS" signature="userCanSearchForComputerName()[pri:1, instance:tests.SearchForComputerTest@32d992b2]" name="userCanSearchForComputerName" duration-ms="3176" started-at="2019-05-05T11:36:26Z" finished-at="2019-05-05T11:36:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- userCanSearchForComputerName -->
+        <test-method status="PASS" signature="screeshotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.SearchForComputerTest@32d992b2]" name="screeshotOnFailure" is-config="true" duration-ms="0" started-at="2019-05-05T11:36:29Z" finished-at="2019-05-05T11:36:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=userCanSearchForComputerName status=SUCCESS method=SearchForComputerTest.userCanSearchForComputerName()[pri:1, instance:tests.SearchForComputerTest@32d992b2] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- screeshotOnFailure -->
+        <test-method status="PASS" signature="initiatingPageObjects()[pri:0, instance:tests.SearchForComputerTest@32d992b2]" name="initiatingPageObjects" is-config="true" duration-ms="1" started-at="2019-05-05T11:36:42Z" finished-at="2019-05-05T11:36:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initiatingPageObjects -->
+        <test-method status="PASS" signature="usercannotFindDeletedUniqueComputerName()[pri:2, instance:tests.SearchForComputerTest@32d992b2]" name="usercannotFindDeletedUniqueComputerName" duration-ms="3353" started-at="2019-05-05T11:36:42Z" finished-at="2019-05-05T11:36:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- usercannotFindDeletedUniqueComputerName -->
+        <test-method status="PASS" signature="screeshotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.SearchForComputerTest@32d992b2]" name="screeshotOnFailure" is-config="true" duration-ms="0" started-at="2019-05-05T11:36:45Z" finished-at="2019-05-05T11:36:45Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=usercannotFindDeletedUniqueComputerName status=SUCCESS method=SearchForComputerTest.usercannotFindDeletedUniqueComputerName()[pri:2, instance:tests.SearchForComputerTest@32d992b2] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- screeshotOnFailure -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:tests.SearchForComputerTest@32d992b2]" name="tearDownClass" is-config="true" duration-ms="1" started-at="2019-05-05T11:36:45Z" finished-at="2019-05-05T11:36:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- tests.SearchForComputerTest -->
+      <class name="tests.DeleteComputerTest">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:tests.DeleteComputerTest@1810399e]" name="setUpClass" is-config="true" duration-ms="13" started-at="2019-05-05T11:36:15Z" finished-at="2019-05-05T11:36:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="RetrievingDatafromJSON()[pri:0, instance:tests.DeleteComputerTest@1810399e]" name="RetrievingDatafromJSON" is-config="true" duration-ms="1" started-at="2019-05-05T11:36:15Z" finished-at="2019-05-05T11:36:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RetrievingDatafromJSON -->
+        <test-method status="PASS" signature="userCanDeleteComputer()[pri:0, instance:tests.DeleteComputerTest@1810399e]" name="userCanDeleteComputer" duration-ms="4107" started-at="2019-05-05T11:36:15Z" finished-at="2019-05-05T11:36:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- userCanDeleteComputer -->
+        <test-method status="PASS" signature="initiatingPageObjects()[pri:0, instance:tests.DeleteComputerTest@1810399e]" name="initiatingPageObjects" is-config="true" duration-ms="0" started-at="2019-05-05T11:36:15Z" finished-at="2019-05-05T11:36:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initiatingPageObjects -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:tests.DeleteComputerTest@1810399e]" name="tearDownClass" is-config="true" duration-ms="0" started-at="2019-05-05T11:36:20Z" finished-at="2019-05-05T11:36:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+        <test-method status="PASS" signature="screeshotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.DeleteComputerTest@1810399e]" name="screeshotOnFailure" is-config="true" duration-ms="0" started-at="2019-05-05T11:36:20Z" finished-at="2019-05-05T11:36:20Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=userCanDeleteComputer status=SUCCESS method=DeleteComputerTest.userCanDeleteComputer()[pri:0, instance:tests.DeleteComputerTest@1810399e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- screeshotOnFailure -->
+      </class> <!-- tests.DeleteComputerTest -->
+    </test> <!-- Firefox Testing -->
+  </suite> <!-- Regression Suite -->
+</testng-results>
