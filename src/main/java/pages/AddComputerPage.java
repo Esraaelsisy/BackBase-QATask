@@ -7,7 +7,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class AddComputerPage extends PageBase {
 	/**
-	 * Page Class for the Add computer page  
+	 * Page Class for the Add computer page
+	 * 
 	 * @param driver
 	 */
 
@@ -51,22 +52,27 @@ public class AddComputerPage extends PageBase {
 	public void addNewComputer(String name, String introducedDate, String discontinuedDate, String companyoption) {
 		System.out.println("User will add a new computer Data");
 
+		// Typing $name in computer name test box
 		wait.until(ExpectedConditions.visibilityOf(nameTxtBox));
 		typeInTxtBox(nameTxtBox, name);
 		System.out.println("Computer name " + name + " is added successfully");
-
+		
+		// Typing $introducedDate in Introduced Date test box
 		wait.until(ExpectedConditions.visibilityOf(introducedDateTxtBox));
 		typeInTxtBox(introducedDateTxtBox, introducedDate);
 		System.out.println("Computer Introduced Date " + introducedDate + " is added successfully");
-
+		
+		// Typing $discontinuedDate in Discontinued Date test box
 		wait.until(ExpectedConditions.visibilityOf(discontinuedDateTxtBox));
 		typeInTxtBox(discontinuedDateTxtBox, discontinuedDate);
 		System.out.println("Computer Discontinued Date " + discontinuedDate + " is added successfully");
-
+		
+		// Selecting $companyoption from company list
 		wait.until(ExpectedConditions.visibilityOf(companyList));
 		selectFromSelectElement(companyList, companyoption);
 		System.out.println("Computer Company " + companyoption + " is added successfully");
-
+		
+		// clicking on Create company button
 		wait.until(ExpectedConditions.visibilityOf(createComputerBtn));
 		clickBtn(createComputerBtn);
 
@@ -80,12 +86,13 @@ public class AddComputerPage extends PageBase {
 	 */
 	public void canceladding() {
 		System.out.println("User will cancel the adding of computer data");
-
+		// clicking on Cancel button
 		wait.until(ExpectedConditions.visibilityOf(cancelBtn));
 		clickBtn(cancelBtn);
 
 		System.out.println("User canceled the adding of computer data successfully");
 	}
+
 	/*
 	 * Function for getting Css value of color of Label
 	 */
@@ -95,6 +102,7 @@ public class AddComputerPage extends PageBase {
 		String color = nameRequiedLabel.getCssValue("color");
 		return color;
 	}
+
 	/*
 	 * Function for getting Css value of color of Label
 	 */

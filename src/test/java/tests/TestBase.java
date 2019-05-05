@@ -5,12 +5,14 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import org.json.simple.parser.ParseException;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Optional;
@@ -85,17 +87,10 @@ public class TestBase extends AbstractTestNGCucumberTests {
 		driver.navigate().to(BaseURL);
 		System.out.println("Requesting :  " + BaseURL + "using browser :  " + browserName);
 	}
-	/*
-	 * This runs before each @Test method it initializes PageObjects and gets Data
-	 */
-
-	@BeforeMethod(groups = { "Regression" })
-	public void initiatingPageObjectsAndData() throws FileNotFoundException, IOException, ParseException {
-		addComputerObj = new AddComputerPage(driver);
-		mainComputerObj = new MainPage(driver);
-		editComputerObj = new EditComputerPage(driver);
-		searchResultsObj = new SearchResultsPage(driver);
-
+	
+	@BeforeClass(groups = { "Regression" })
+	public void RetrievingDatafromJSON() throws FileNotFoundException, IOException, ParseException
+	{
 		jReader = new JSONReader();
 		jReader.JSONDataReader();
 
@@ -114,7 +109,18 @@ public class TestBase extends AbstractTestNGCucumberTests {
 		wrongintroducedDate = jReader.wrongIntrdoucedDate;
 		wrongdiscontinuedDate = jReader.wrongDiscontinuedDate;
 		uniqueComputerName = jReader.uniqueComputerName;
+	}
+	
+	/*
+	 * This runs before each @Test method it initializes PageObjects and gets Data
+	 */
 
+	@BeforeMethod(groups = { "Regression" })
+	public void initiatingPageObjects() {
+		addComputerObj = new AddComputerPage(driver);
+		mainComputerObj = new MainPage(driver);
+		editComputerObj = new EditComputerPage(driver);
+		searchResultsObj = new SearchResultsPage(driver);
 	}
 
 	/*

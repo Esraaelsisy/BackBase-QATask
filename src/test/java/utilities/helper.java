@@ -13,7 +13,9 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
 public class helper {
-
+	/*
+	 * Formatting Dates from 'dd MMM yyyy' format to 'yyyy-MM-dd'
+	 */
 	public static String formatDates(String Date) {
 		try {
 			SimpleDateFormat formatter = new SimpleDateFormat("dd MMM yyyy");
@@ -31,6 +33,9 @@ public class helper {
 		}
 	}
 
+	/*
+	 * Formatting color from rgb format to hexadecimal format
+	 */
 	public static String colorFormatter(String color) {
 		try {
 			String[] hexValue = null;
@@ -64,6 +69,9 @@ public class helper {
 		}
 
 	}
+	/*
+	 * Taking screenshots helper
+	 */
 
 	public static void captureScreenshot(WebDriver driver, String screenshotname) {
 		Path dest = Paths.get("./Screenshots", screenshotname + ".png");

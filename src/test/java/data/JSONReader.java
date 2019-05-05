@@ -25,10 +25,10 @@ public class JSONReader {
 	public String wrongComputerName;
 	public String wrongIntrdoucedDate;
 	public String wrongDiscontinuedDate;
-	
+
 	public String uniqueComputerName;
 
-	public String filepath = System.getProperty("user.dir") + "\\src\\test\\java\\data\\ComouterData.json";
+	private String filepath = System.getProperty("user.dir") + "\\src\\test\\java\\data\\ComputerData.json";
 
 	public void JSONDataReader() throws FileNotFoundException, IOException, ParseException {
 		File srcFile = new File(filepath);
@@ -51,7 +51,7 @@ public class JSONReader {
 			wrongComputerName = (String) computer.get("wrong computer name");
 			wrongIntrdoucedDate = (String) computer.get("wrong introduced date");
 			wrongDiscontinuedDate = (String) computer.get("wrong discontinued date");
-			
+
 			uniqueComputerName = (String) computer.get("unique computer name");
 
 		}

@@ -7,7 +7,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class MainPage extends PageBase {
 	/**
-	 * Page Class for the Home page  
+	 * Page Class for the Home page
+	 * 
 	 * @param driver
 	 */
 
@@ -26,10 +27,10 @@ public class MainPage extends PageBase {
 
 	@FindBy(id = "searchsubmit")
 	private WebElement searchSubmitBtn;
-	
+
 	@FindBy(id = "//header//a")
 	private WebElement mainPageDirectionLink;
-	
+
 	@FindBy(css = "div.alert-message.warning")
 	private WebElement actionSuccessMsg;
 
@@ -56,10 +57,10 @@ public class MainPage extends PageBase {
 
 	public void searchForComputerName(String searchValue) {
 		System.out.println("User will search for computer name :  " + searchValue);
-
+		// Typing $searchValue in search text box
 		wait.until(ExpectedConditions.visibilityOf(searchTxtBox));
 		typeInTxtBox(searchTxtBox, searchValue);
-
+		// Clicking on Filter by name button
 		wait.until(ExpectedConditions.visibilityOf(searchSubmitBtn));
 		clickBtn(searchSubmitBtn);
 
@@ -103,10 +104,8 @@ public class MainPage extends PageBase {
 		return text;
 
 	}
-	
-	
-	public void mainPageDirection()
-	{
+
+	public void mainPageDirection() {
 		wait.until(ExpectedConditions.visibilityOf(mainPageDirectionLink));
 		clickBtn(mainPageDirectionLink);
 		System.out.println("Clicking on Main Page Link from the header");
