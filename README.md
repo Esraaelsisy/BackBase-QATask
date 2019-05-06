@@ -10,9 +10,9 @@ There are several ways to run the code after importing the project:
 
 - Run each test separately by right click on the class and select run as testNG test.
 - Run the "Regression Suite.xml" as testNG suite you can add the browser parameter in it or leave it to take the optional value in testBase class --> it will run the tests with "Regression" group included
+- Run the "Regression Suite for Selenium Grid.xml" as testNG suite you can add the browser parameter in it or leave it to take the optional value in testBase class --> it will run the tests with "Regression" group included Parallel 
 - Run the BDD test by right click on the "Test Runner.java" class and select run as testNG test.
-- Run through the command line by navigating to the project folder then write 
-" mvn test"
+- Run through the command line by navigating to the project folder then write "mvn clean install test -DsuiteXmlFile= Regression Suite.xml" or "mvn clean install test -DsuiteXmlFile= Regression Suite for Selenium Grid.xml"
 
 # Project Packages
 Project consists of 7 packages as the following:
@@ -22,6 +22,8 @@ Project consists of 7 packages as the following:
 
 - "tests": This package contains of "TestBase" class which starts and stops the WebDriver for each <Test> tag in TestNG xml file. 
     Besides , Test Classes which have the Independent Test scenarios mapped with the methods from page objects , with an inheritance from "TestBase" superclass 
+    
+- "gridTests" : This package contains of "TestBaseforSeleniumGrid" class which starts and stops the Remote WebDriver for each <Test> tag in TestNG xml file. Besides , Test Classes which have the Independent Test scenarios mapped with the methods from page objects , with an inheritance from "TestBasefor SeleniumGrid" superclass to be run parallel.
   
 - "utilities": This package contains of "helper" class that has all the handler functions needed through the test classes , like : Date formatting , Taking screenshots and Colors formatting
 
@@ -42,6 +44,8 @@ Project consists of 7 packages as the following:
 - "Screenshots" :  contains screenshots taken on failure or on purpose.
 - "target / cucumber-html-report" :  contains "index.html" file for cucumber BDD test running results.
 - "test-output" : contains "index.html" file for TestNG tests running results.
+- "Regression suite.xml" :  XML file for testng suite to be run sequentially
+- "Regression Suite for Selenium Grid.xml" :  XML file for testng suite to be run parallel
 
 
 # Project Deliverables 
@@ -59,3 +63,4 @@ Project consists of 7 packages as the following:
 - json-simple: This used to parse  and read the JSON test data file.
 - Maven-surefire-plugin: used for configuring the testng and suite xml"Regression Suite.xml"
 - Maven-compiler-plugin: used to compile the project to  java version 1.8 
+- Faker : for creating random fake data
