@@ -10,9 +10,10 @@ There are several ways to run the code after importing the project:
 
 - Run each test separately by right click on the class and select run as testNG test.
 - Run the "Regression Suite.xml" as testNG suite you can add the browser parameter in it or leave it to take the optional value in testBase class --> it will run the tests with "Regression" group included
-- Run the "Regression Suite for Selenium Grid.xml" as testNG suite you can add the browser parameter in it or leave it to take the optional value in testBase class --> it will run the tests with "Regression" group included Parallel 
+- Run the "Regression Suite for Selenium Grid.xml" as testNG suite you can add the browser parameter in it or leave it to take the optional value in testBase class --> it will run the parallel tests with "Regression" group included. First you need to install selenium server standalone then you need to add a hub and 2 nodes for Firefox and Chrome browsers from the command line
 - Run the BDD test by right click on the "Test Runner.java" class and select run as testNG test.
 - Run through the command line by navigating to the project folder then write "mvn clean install test -DsuiteXmlFile= Regression Suite.xml" or "mvn clean install test -DsuiteXmlFile= Regression Suite for Selenium Grid.xml"
+
 
 # Project Packages
 Project consists of 7 packages as the following:
