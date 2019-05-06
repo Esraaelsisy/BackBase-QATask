@@ -12,7 +12,9 @@ There are several ways to run the code after importing the project:
 - Run the "Regression Suite.xml" as testNG suite you can add the browser parameter in it or leave it to take the optional value in testBase class --> it will run the tests with "Regression" group included
 - Run the "Regression Suite for Selenium Grid.xml" as testNG suite you can add the browser parameter in it or leave it to take the optional value in testBase class --> it will run the tests with "Regression" group included Parallel 
 - Run the BDD test by right click on the "Test Runner.java" class and select run as testNG test.
-- Run through the command line by navigating to the project folder then write "mvn clean install test -DsuiteXmlFile= Regression Suite.xml" or "mvn clean install test -DsuiteXmlFile= Regression Suite for Selenium Grid.xml"
+- Run through the command line by navigating to the project folder then write 
+"mvn test"
+
 
 # Project Packages
 Project consists of 7 packages as the following:
@@ -55,7 +57,7 @@ Project consists of 7 packages as the following:
 - Cucumber Report will be in "target/ cucumber-html-report" after running the "TestRunner.java" class
 
 
-# Dependencies/Plugins used
+# Dependencies/Plug-ins used
 - Selenium: To initiate the driver and handle with the web elements.
 - Testng: Used for test annotations , asserting on the results and parallel execution.
 - Cucumber: Used for testing BDD via features , steps and runner 
