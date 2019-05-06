@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="114.763" tests="20" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="155.973" tests="20" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -18,7 +18,7 @@
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_181\jre\bin"/>
-    <property name="sun.java.command" value="C:\Users\ESRAAE~1\AppData\Local\Temp\surefire4858781543516111408\surefirebooter3845037597032061102.jar C:\Users\Esraa Elsisy\AppData\Local\Temp\surefire4858781543516111408 2019-05-05T13-34-57_092-jvmRun1 surefire4715577928062134696tmp surefire_08749101783222308820tmp"/>
+    <property name="sun.java.command" value="C:\Users\ESRAAE~1\AppData\Local\Temp\surefire8106231704217683692\surefirebooter1328564147995448386.jar C:\Users\Esraa Elsisy\AppData\Local\Temp\surefire8106231704217683692 2019-05-05T15-07-55_052-jvmRun1 surefire2389384876233131498tmp surefire_06677083957618908796tmp"/>
     <property name="surefire.test.class.path" value="C:\Users\Esraa Elsisy\eclipse-workspace\computer-database-testingframework\target\test-classes;C:\Users\Esraa Elsisy\eclipse-workspace\computer-database-testingframework\target\classes;C:\Users\Esraa Elsisy\.m2\repository\org\testng\testng\6.14.3\testng-6.14.3.jar;C:\Users\Esraa Elsisy\.m2\repository\com\beust\jcommander\1.72\jcommander-1.72.jar;C:\Users\Esraa Elsisy\.m2\repository\org\apache-extras\beanshell\bsh\2.0b6\bsh-2.0b6.jar;C:\Users\Esraa Elsisy\.m2\repository\org\seleniumhq\selenium\selenium-java\3.141.59\selenium-java-3.141.59.jar;C:\Users\Esraa Elsisy\.m2\repository\org\seleniumhq\selenium\selenium-api\3.141.59\selenium-api-3.141.59.jar;C:\Users\Esraa Elsisy\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\3.141.59\selenium-chrome-driver-3.141.59.jar;C:\Users\Esraa Elsisy\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\3.141.59\selenium-edge-driver-3.141.59.jar;C:\Users\Esraa Elsisy\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\3.141.59\selenium-firefox-driver-3.141.59.jar;C:\Users\Esraa Elsisy\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\3.141.59\selenium-ie-driver-3.141.59.jar;C:\Users\Esraa Elsisy\.m2\repository\org\seleniumhq\selenium\selenium-opera-driver\3.141.59\selenium-opera-driver-3.141.59.jar;C:\Users\Esraa Elsisy\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\3.141.59\selenium-remote-driver-3.141.59.jar;C:\Users\Esraa Elsisy\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\3.141.59\selenium-safari-driver-3.141.59.jar;C:\Users\Esraa Elsisy\.m2\repository\org\seleniumhq\selenium\selenium-support\3.141.59\selenium-support-3.141.59.jar;C:\Users\Esraa Elsisy\.m2\repository\net\bytebuddy\byte-buddy\1.8.15\byte-buddy-1.8.15.jar;C:\Users\Esraa Elsisy\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\Esraa Elsisy\.m2\repository\com\google\guava\guava\25.0-jre\guava-25.0-jre.jar;C:\Users\Esraa Elsisy\.m2\repository\com\google\code\findbugs\jsr305\1.3.9\jsr305-1.3.9.jar;C:\Users\Esraa Elsisy\.m2\repository\org\checkerframework\checker-compat-qual\2.0.0\checker-compat-qual-2.0.0.jar;C:\Users\Esraa Elsisy\.m2\repository\com\google\errorprone\error_prone_annotations\2.1.3\error_prone_annotations-2.1.3.jar;C:\Users\Esraa Elsisy\.m2\repository\com\google\j2objc\j2objc-annotations\1.1\j2objc-annotations-1.1.jar;C:\Users\Esraa Elsisy\.m2\repository\org\codehaus\mojo\animal-sniffer-annotations\1.14\animal-sniffer-annotations-1.14.jar;C:\Users\Esraa Elsisy\.m2\repository\com\squareup\okhttp3\okhttp\3.11.0\okhttp-3.11.0.jar;C:\Users\Esraa Elsisy\.m2\repository\com\squareup\okio\okio\1.14.0\okio-1.14.0.jar;C:\Users\Esraa Elsisy\.m2\repository\com\googlecode\json-simple\json-simple\1.1.1\json-simple-1.1.1.jar;C:\Users\Esraa Elsisy\.m2\repository\junit\junit\4.10\junit-4.10.jar;C:\Users\Esraa Elsisy\.m2\repository\org\hamcrest\hamcrest-core\1.1\hamcrest-core-1.1.jar;C:\Users\Esraa Elsisy\.m2\repository\com\github\javafaker\javafaker\0.17.2\javafaker-0.17.2.jar;C:\Users\Esraa Elsisy\.m2\repository\org\apache\commons\commons-lang3\3.5\commons-lang3-3.5.jar;C:\Users\Esraa Elsisy\.m2\repository\org\yaml\snakeyaml\1.23\snakeyaml-1.23-android.jar;C:\Users\Esraa Elsisy\.m2\repository\com\github\mifmif\generex\1.0.2\generex-1.0.2.jar;C:\Users\Esraa Elsisy\.m2\repository\dk\brics\automaton\automaton\1.11-8\automaton-1.11-8.jar;C:\Users\Esraa Elsisy\.m2\repository\info\cukes\cucumber-java\1.2.5\cucumber-java-1.2.5.jar;C:\Users\Esraa Elsisy\.m2\repository\info\cukes\cucumber-core\1.2.5\cucumber-core-1.2.5.jar;C:\Users\Esraa Elsisy\.m2\repository\info\cukes\cucumber-html\0.2.3\cucumber-html-0.2.3.jar;C:\Users\Esraa Elsisy\.m2\repository\info\cukes\cucumber-jvm-deps\1.0.5\cucumber-jvm-deps-1.0.5.jar;C:\Users\Esraa Elsisy\.m2\repository\info\cukes\cucumber-testng\1.2.5\cucumber-testng-1.2.5.jar;C:\Users\Esraa Elsisy\.m2\repository\info\cukes\gherkin\2.12.2\gherkin-2.12.2.jar;C:\Users\Esraa Elsisy\.m2\repository\org\apache\maven\surefire\surefire-testng-utils\2.21.0\surefire-testng-utils-2.21.0.jar;C:\Users\Esraa Elsisy\.m2\repository\org\apache\maven\surefire\surefire-grouper\2.21.0\surefire-grouper-2.21.0.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\Esraa Elsisy"/>
@@ -31,7 +31,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\ESRAAE~1\AppData\Local\Temp\surefire4858781543516111408\surefirebooter3845037597032061102.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\ESRAAE~1\AppData\Local\Temp\surefire8106231704217683692\surefirebooter1328564147995448386.jar"/>
     <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_181\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_181\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_181\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_181\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_181\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_181\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_181\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_181\jre\classes"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
@@ -60,24 +60,24 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="52.0"/>
   </properties>
-  <testcase name="userCanDeleteComputer" classname="tests.DeleteComputerTest" time="4.923"/>
-  <testcase name="userCanDeleteComputer" classname="tests.DeleteComputerTest" time="4.112"/>
-  <testcase name="userCanAddNewComputer" classname="tests.AddComputerTest" time="1.776"/>
-  <testcase name="userCanAddNewComputer" classname="tests.AddComputerTest" time="2.425"/>
-  <testcase name="userCanEditComputerName" classname="tests.EditComputerTest" time="3.41"/>
-  <testcase name="userCanEditComputerName" classname="tests.EditComputerTest" time="3.876"/>
-  <testcase name="userCanSearchForComputerName" classname="tests.SearchForComputerTest" time="2.977"/>
-  <testcase name="userCanSearchForComputerName" classname="tests.SearchForComputerTest" time="3.19"/>
-  <testcase name="userCanViewComputerDataInSearchResults" classname="tests.ViewComputerDataTest" time="3.836"/>
-  <testcase name="userCanViewComputerDataInSearchResults" classname="tests.ViewComputerDataTest" time="3.636"/>
-  <testcase name="userCannotAddComputerWithoutName" classname="tests.AddComputerTest" time="5.88"/>
-  <testcase name="userCannotAddComputerWithoutName" classname="tests.AddComputerTest" time="2.597"/>
-  <testcase name="userCanEditSavedComputerData" classname="tests.EditComputerTest" time="3.672"/>
-  <testcase name="userCanEditSavedComputerData" classname="tests.EditComputerTest" time="6.478"/>
-  <testcase name="usercannotFindDeletedUniqueComputerName" classname="tests.SearchForComputerTest" time="4.608"/>
-  <testcase name="usercannotFindDeletedUniqueComputerName" classname="tests.SearchForComputerTest" time="3.352"/>
-  <testcase name="userCanViewComputerDataInEditPage" classname="tests.ViewComputerDataTest" time="3.699"/>
-  <testcase name="userCanViewComputerDataInEditPage" classname="tests.ViewComputerDataTest" time="3.016"/>
-  <testcase name="userCannotEditComputerWithoutName" classname="tests.EditComputerTest" time="5"/>
-  <testcase name="userCannotEditComputerWithoutName" classname="tests.EditComputerTest" time="4.193"/>
+  <testcase name="userCanDeleteComputer" classname="tests.DeleteComputerTest" time="9.423"/>
+  <testcase name="userCanDeleteComputer" classname="tests.DeleteComputerTest" time="14.067"/>
+  <testcase name="userCanAddNewComputer" classname="tests.AddComputerTest" time="4.717"/>
+  <testcase name="userCanAddNewComputer" classname="tests.AddComputerTest" time="2.11"/>
+  <testcase name="userCanEditComputerName" classname="tests.EditComputerTest" time="8.25"/>
+  <testcase name="userCanEditComputerName" classname="tests.EditComputerTest" time="3.483"/>
+  <testcase name="userCanSearchForComputerName" classname="tests.SearchForComputerTest" time="4.325"/>
+  <testcase name="userCanSearchForComputerName" classname="tests.SearchForComputerTest" time="2.819"/>
+  <testcase name="userCanViewComputerDataInSearchResults" classname="tests.ViewComputerDataTest" time="3.602"/>
+  <testcase name="userCanViewComputerDataInSearchResults" classname="tests.ViewComputerDataTest" time="3.291"/>
+  <testcase name="userCannotAddComputerWithoutName" classname="tests.AddComputerTest" time="5.106"/>
+  <testcase name="userCannotAddComputerWithoutName" classname="tests.AddComputerTest" time="2.641"/>
+  <testcase name="userCanEditSavedComputerData" classname="tests.EditComputerTest" time="4.897"/>
+  <testcase name="userCanEditSavedComputerData" classname="tests.EditComputerTest" time="3.831"/>
+  <testcase name="usercannotFindDeletedUniqueComputerName" classname="tests.SearchForComputerTest" time="5.14"/>
+  <testcase name="usercannotFindDeletedUniqueComputerName" classname="tests.SearchForComputerTest" time="4.236"/>
+  <testcase name="userCanViewComputerDataInEditPage" classname="tests.ViewComputerDataTest" time="4.514"/>
+  <testcase name="userCanViewComputerDataInEditPage" classname="tests.ViewComputerDataTest" time="4.242"/>
+  <testcase name="userCannotEditComputerWithoutName" classname="tests.EditComputerTest" time="6.538"/>
+  <testcase name="userCannotEditComputerWithoutName" classname="tests.EditComputerTest" time="4.755"/>
 </testsuite>
