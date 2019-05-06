@@ -1,5 +1,6 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Regression Suite" parallel="tests" thread-count="2">
+<suite name="Regression Suite for Selenium Grid" parallel="tests"
+	thread-count="2">
 
 	<test name="Chrome Testing" preserve-order="false">
 		<parameter name="browser" value="chrome" />
@@ -10,11 +11,11 @@
 		</groups>
 
 		<classes>
-			<class name="gridTests.AddComputerTest" />
-			<class name="gridTests.EditComputerTest" />
-			<class name="gridTests.DeleteComputerTest" />
-			<class name="gridTests.SearchForComputerTest" />
-			<class name="gridTests.ViewComputerDataTest" />
+			<class name="gridTests.AddComputerParallelTest" />
+			<class name="gridTests.EditComputerParallelTest" />
+			<class name="gridTests.DeleteComputerParallelTest" />
+			<class name="gridTests.SearchForComputerParallelTest" />
+			<class name="gridTests.ViewComputerDataParallelTest" />
 
 		</classes>
 	</test>
@@ -28,11 +29,11 @@
 		</groups>
 
 		<classes>
-			<class name="gridTests.AddComputerTest" />
-			<class name="gridTests.EditComputerTest" />
-			<class name="gridTests.DeleteComputerTest" />
-			<class name="gridTests.SearchForComputerTest" />
-			<class name="gridTests.ViewComputerDataTest" />
+			<class name="gridTests.AddComputerParallelTest" />
+			<class name="gridTests.EditComputerParallelTest" />
+			<class name="gridTests.DeleteComputerParallelTest" />
+			<class name="gridTests.SearchForComputerParallelTest" />
+			<class name="gridTests.ViewComputerDataParallelTest" />
 
 		</classes>
 	</test>

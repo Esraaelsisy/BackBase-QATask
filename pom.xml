@@ -110,5 +110,19 @@
 				<testNGSuite>Regression Suite.xml</testNGSuite>
 			</properties>
 		</profile>
+		
+		<profile>
+			<id>parallelregression</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+				<property>
+					<name>environment</name>
+					<value>Regression</value>
+				</property>
+			</activation>
+			<properties>
+				<testNGSuite>Regression Suite for Selenium Grid.xml</testNGSuite>
+			</properties>
+		</profile>
 	</profiles>
 </project>

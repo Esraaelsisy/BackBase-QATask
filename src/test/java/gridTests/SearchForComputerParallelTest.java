@@ -54,16 +54,17 @@ public class SearchForComputerParallelTest extends TestBaseforSeleniumGrid {
 		}
 	}
 
-	@Test(priority = 2, groups = { "Not Regression" })
+	@Test(priority = 2, groups = { "Regression" })
 	public void usercannotFindDeletedUniqueComputerName() {
-		Faker fakename = new Faker();
-		uniqueComputerName=fakename.name().toString();
+
 		try {
+			Faker fakename = new Faker();
+			uniqueComputerName = fakename.name().toString();
 			System.out.println("========================================================");
 			System.out.println("========================================================");
-			System.out.println(
-					new Throwable().getStackTrace()[0].getMethodName() + " Test will be executed now with data "
-							+ computerName + " , " + introducedDate + " , " + discontinuedDate + " , " + companyOption);
+			System.out.println(new Throwable().getStackTrace()[0].getMethodName()
+					+ " Test will be executed now with data " + uniqueComputerName + " , " + introducedDate + " , "
+					+ discontinuedDate + " , " + companyOption);
 			// getting Number of computers before adding a new computer data
 			mainComputerObj.getComputersNumber();
 

@@ -3,9 +3,11 @@ package tests;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import com.github.javafaker.Faker;
+
 public class SearchForComputerTest extends TestBase {
 
-	@Test(priority = 1, alwaysRun = true , groups= {"Regression"})
+	@Test(priority = 1, alwaysRun = true, groups = { "Regression" })
 	public void userCanSearchForComputerName() {
 		try {
 			System.out.println("========================================================");
@@ -57,16 +59,16 @@ public class SearchForComputerTest extends TestBase {
 		}
 	}
 
-
-
-	@Test(priority = 2 , groups= {"Regression"})
+	@Test(priority = 2, groups = { "Regression" })
 	public void usercannotFindDeletedUniqueComputerName() {
 		try {
+			Faker fakename = new Faker();
+			uniqueComputerName = fakename.name().toString();
 			System.out.println("========================================================");
 			System.out.println("========================================================");
 			System.out.println(
 					new Throwable().getStackTrace()[0].getMethodName() + " Test will be executed now with data "
-							+ computerName + " , " + introducedDate + " , " + discontinuedDate + " , " + companyOption);
+							+ uniqueComputerName + " , " + introducedDate + " , " + discontinuedDate + " , " + companyOption);
 			// getting Number of computers before adding a new computer data
 			int numberBeforeAdding = mainComputerObj.getComputersNumber();
 
