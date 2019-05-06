@@ -1,13 +1,14 @@
-package tests;
+package gridTests;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.concurrent.TimeUnit;
+import java.net.MalformedURLException;
+import java.net.URL;
 
 import org.json.simple.parser.ParseException;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
@@ -25,16 +26,16 @@ import pages.MainPage;
 import pages.SearchResultsPage;
 import utilities.helper;
 
-public class TestBase extends AbstractTestNGCucumberTests {
+public class TestBaseforSeleniumGrid extends AbstractTestNGCucumberTests {
 	/**
 	 * @author Esraa.elsisy Initializing WebDriver and get instances from all Page
 	 *         Classes to be used within all Test Scripts with @Test annotation
 	 * 
 	 * @param driver
 	 **/
-	protected static WebDriver driver;
+	// protected static WebDriver driver;
 	protected static String BaseURL = "http://computer-database.herokuapp.com/computers";
-	//protected static ThreadLocal<RemoteWebDriver> remoteDriver = null;
+	protected static ThreadLocal<RemoteWebDriver> driver = null;
 
 	// Page Objects
 	protected AddComputerPage addComputerObj;
@@ -72,20 +73,17 @@ public class TestBase extends AbstractTestNGCucumberTests {
 	 */
 	@BeforeTest(groups = { "Regression" })
 	@Parameters("browser")
-	public void SetUpEnvironment(@Optional("chrome") String browserName) {
+	public void SetUpEnvironment(@Optional("chrome") String browserName) throws MalformedURLException {
 
-		if (browserName.equalsIgnoreCase("chrome")) {
-			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/drivers/chromedriver.exe");
-			driver = new ChromeDriver();
-		} else if (browserName.equalsIgnoreCase("firefox")) {
-			System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "/drivers/geckodriver.exe");
-			driver = new FirefoxDriver();
-		}
+		driver = new ThreadLocal<>();
+		DesiredCapabilities caps = new DesiredCapabilities();
+		caps.setCapability("browserName", browserName);
+		driver.set(new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), caps));
+		getDriver().navigate().to(BaseURL);
+	}
 
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(120, TimeUnit.SECONDS);
-		driver.navigate().to(BaseURL);
-		System.out.println("Requesting :  " + BaseURL + "using browser :  " + browserName);
+	public WebDriver getDriver() {
+		return driver.get();
 	}
 
 	@BeforeClass(groups = { "Regression" })
@@ -116,10 +114,10 @@ public class TestBase extends AbstractTestNGCucumberTests {
 
 	@BeforeMethod(groups = { "Regression" })
 	public void initiatingPageObjects() {
-		addComputerObj = new AddComputerPage(driver);
-		mainComputerObj = new MainPage(driver);
-		editComputerObj = new EditComputerPage(driver);
-		searchResultsObj = new SearchResultsPage(driver);
+		addComputerObj = new AddComputerPage(getDriver());
+		mainComputerObj = new MainPage(getDriver());
+		editComputerObj = new EditComputerPage(getDriver());
+		searchResultsObj = new SearchResultsPage(getDriver());
 	}
 
 	/*
@@ -128,7 +126,7 @@ public class TestBase extends AbstractTestNGCucumberTests {
 	@AfterMethod(groups = { "Regression" })
 	public void screeshotOnFailure(ITestResult result) {
 		if (result.getStatus() == ITestResult.FAILURE) {
-			helper.captureScreenshot(driver, result.getName());
+			helper.captureScreenshot(getDriver(), result.getName());
 		}
 	}
 
@@ -137,19 +135,7 @@ public class TestBase extends AbstractTestNGCucumberTests {
 	 */
 	@AfterTest(groups = { "Regression" })
 	public void StopDriver() {
-		driver.quit();
+		getDriver().quit();
+		driver.remove();
 	}
-
-	/*
-	 * This is the common set of Computer Data can be used in all Test scripts
-	 * Changing in it , will affect in the parameters sent to the whole Test
-	 * Scripts!
-	 * 
-	 * @return Object [][]
-	 * 
-	 * @DataProvider(name = "Computer Data") public Object[][] CorrectComputerData()
-	 * { return new Object[][] { { "HP ProBook", "HP ProBook 2019
-	 * v1", "1960-05-01", "2002-05-02", "Hewlett-Packard" }, { "Lenovo Thinkpad",
-	 * "Lenovo Thinkpad 2019 v1", "2000-07-05", "2015-08-01", "Lenovo Group" } }; }
-	 */
 }

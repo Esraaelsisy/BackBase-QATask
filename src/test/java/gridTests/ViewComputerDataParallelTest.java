@@ -1,22 +1,24 @@
-package tests;
+package gridTests;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.github.javafaker.Faker;
+import utilities.helper;
 
-public class SearchForComputerTest extends TestBase {
+public class ViewComputerDataParallelTest extends TestBaseforSeleniumGrid {
 
-	@Test(priority = 1, alwaysRun = true, groups = { "Regression" })
-	public void userCanSearchForComputerName() {
+	@Test(alwaysRun = true, priority = 1, groups = { "Regression" })
+	public void userCanViewComputerDataInSearchResults() {
+
 		try {
 			System.out.println("========================================================");
 			System.out.println("========================================================");
 			System.out.println(
 					new Throwable().getStackTrace()[0].getMethodName() + " Test will be executed now with data "
 							+ computerName + " , " + introducedDate + " , " + discontinuedDate + " , " + companyOption);
+
 			// getting Number of computers before adding a new computer data
-			int numberBeforeAdding = mainComputerObj.getComputersNumber();
+			mainComputerObj.getComputersNumber();
 
 			// Requesting "Add a new computer" button from Main Page
 			mainComputerObj.clickonAddComputerBtn();
@@ -25,17 +27,12 @@ public class SearchForComputerTest extends TestBase {
 			addComputerObj.addNewComputer(computerName, introducedDate, discontinuedDate, companyOption);
 
 			// getting Number of computers after adding a new computer data
-			int numberAfterAdding = mainComputerObj.getComputersNumber();
+			mainComputerObj.getComputersNumber();
 
 			// Asserting the creation success message is shown in Main Page
 			Assert.assertTrue(mainComputerObj.getSuccessMsg().contains("has been created"),
 					"No Assertion for 'has been created' success message");
 			System.out.println("Success message of 'has been CREATED' is shown");
-
-			// Asserting the number of computers is increased by 1
-			Assert.assertTrue(numberAfterAdding == numberBeforeAdding + 1,
-					"Number of computers are not increased by 1!!");
-			System.out.println("Number of computers is increased by 1");
 
 			// searching for the computer name
 			mainComputerObj.searchForComputerName(computerName);
@@ -45,6 +42,25 @@ public class SearchForComputerTest extends TestBase {
 			Assert.assertTrue(searchResultsObj.getComputerName().contains(computerName),
 					"No Assertion for the computer name matches the search text");
 			System.out.println("Computer name of first row in results table is :  " + computerName);
+
+			// Converting the format of Dates in Search Results Table
+			String IntroducedDateTxt = helper.formatDates(searchResultsObj.getIntroducedDate());
+			System.out.println("Introduced Date After Formatting is " + IntroducedDateTxt);
+
+			// Converting the format of Dates in Search Results Table
+			String DiscontinuedDateTxt = helper.formatDates(searchResultsObj.getDiscontinuedDate());
+			System.out.println("Discontinued Date After Formatting is " + DiscontinuedDateTxt);
+
+			// Asserting the Introduced Date
+			Assert.assertTrue(IntroducedDateTxt.contains(introducedDate),
+					"No Assertion for the introduced date matches the search text");
+			// Asserting the Discontinued Date
+			Assert.assertTrue(DiscontinuedDateTxt.contains(discontinuedDate),
+					"No Assertion for the disconyinued date matches the search text");
+			// Asserting the Company Option
+			Assert.assertTrue(searchResultsObj.getCompanyOption().contains(companyOption),
+					"No Assertion for the company matches the search text");
+			System.out.println("Computer name of first row in results table matches the search criteria");
 
 			// Clicking on the first result computer name
 			searchResultsObj.selectingFirstRowinSearchResults();
@@ -60,69 +76,62 @@ public class SearchForComputerTest extends TestBase {
 	}
 
 	@Test(priority = 2, groups = { "Regression" })
-	public void usercannotFindDeletedUniqueComputerName() {
+	public void userCanViewComputerDataInEditPage() {
 		try {
-			Faker fakename = new Faker();
-			uniqueComputerName = fakename.name().toString();
 			System.out.println("========================================================");
 			System.out.println("========================================================");
 			System.out.println(
 					new Throwable().getStackTrace()[0].getMethodName() + " Test will be executed now with data "
-							+ uniqueComputerName + " , " + introducedDate + " , " + discontinuedDate + " , " + companyOption);
+							+ computerName + " , " + introducedDate + " , " + discontinuedDate + " , " + companyOption);
+
 			// getting Number of computers before adding a new computer data
-			int numberBeforeAdding = mainComputerObj.getComputersNumber();
+			mainComputerObj.getComputersNumber();
 
 			// Requesting "Add a new computer" button from Main Page
 			mainComputerObj.clickonAddComputerBtn();
 
 			// Entering the computer data in Add computer Page
-			addComputerObj.addNewComputer(uniqueComputerName, introducedDate, discontinuedDate, companyOption);
+			addComputerObj.addNewComputer(computerName, introducedDate, discontinuedDate, companyOption);
 
 			// getting Number of computers after adding a new computer data
-			int numberAfterAdding = mainComputerObj.getComputersNumber();
+			mainComputerObj.getComputersNumber();
 
 			// Asserting the creation success message is shown in Main Page
 			Assert.assertTrue(mainComputerObj.getSuccessMsg().contains("has been created"),
 					"No Assertion for 'has been created' success message");
 			System.out.println("Success message of 'has been CREATED' is shown");
 
-			// Asserting the number of computers is increased by 1
-			Assert.assertTrue(numberAfterAdding == numberBeforeAdding + 1,
-					"Number of computers are not increased by 1!!");
-			System.out.println("Number of computers is increased by 1");
-
 			// searching for the computer name
-			mainComputerObj.searchForComputerName(uniqueComputerName);
+			mainComputerObj.searchForComputerName(computerName);
 
 			// Asserting that the first result computer name contains the same search
 			// criteria
-			Assert.assertTrue(searchResultsObj.getComputerName().contains(uniqueComputerName),
+			Assert.assertTrue(searchResultsObj.getComputerName().contains(computerName),
 					"No Assertion for the computer name matches the search text");
 			System.out.println("Computer name of first row in results table is :  " + computerName);
 
 			// Clicking on the first result computer name
 			searchResultsObj.selectingFirstRowinSearchResults();
 
-			// Deleting this computer
-			editComputerObj.deleteSavedComputer();
+			// Asserting the computer data shown in Edit computer Page
+			Assert.assertTrue(editComputerObj.getComputerName().contains(computerName),
+					"No Assertion for the computer name matches the search text");
+			Assert.assertTrue(editComputerObj.getIntroducedDate().contains(introducedDate),
+					"No Assertion for the introduced date matches the search text");
+			Assert.assertTrue(editComputerObj.getDiscountinuedDate().contains(discontinuedDate),
+					"No Assertion for the discontinued date matches the search text");
+			Assert.assertTrue(editComputerObj.getCompanySelection().contains(companyOption),
+					"No Assertion for the company matches the search text");
+			System.out.println("Computer name of first row in results table matches the search criteria");
 
-			// Asserting the Deletion message
-			Assert.assertTrue(mainComputerObj.getSuccessMsg().contains("has been deleted"),
-					"No Assertion for 'has been deleted' success message");
-			System.out.println("Success message of 'has been deleted' is shown");
+			// Canceling editing the computer in Edit Page
+			editComputerObj.cancelediting();
 
-			// searching for the computer name
-			mainComputerObj.searchForComputerName(uniqueComputerName);
-
-			// Asserting that "No computers found" is shown in the header
-			Assert.assertTrue(mainComputerObj.getComputersNumbersText().contains("No computers found"));
-
-			// Navigating to the BaseURL
-			driver.navigate().to(BaseURL);
 		} catch (Exception e) {
 			System.out.println(
 					"Exception in " + new Throwable().getStackTrace()[0].getMethodName() + " is :" + e.getMessage());
 
 		}
 	}
+
 }

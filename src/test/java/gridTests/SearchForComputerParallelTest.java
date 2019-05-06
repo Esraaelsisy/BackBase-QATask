@@ -1,11 +1,11 @@
-package tests;
+package gridTests;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.github.javafaker.Faker;
 
-public class SearchForComputerTest extends TestBase {
+public class SearchForComputerParallelTest extends TestBaseforSeleniumGrid {
 
 	@Test(priority = 1, alwaysRun = true, groups = { "Regression" })
 	public void userCanSearchForComputerName() {
@@ -16,7 +16,7 @@ public class SearchForComputerTest extends TestBase {
 					new Throwable().getStackTrace()[0].getMethodName() + " Test will be executed now with data "
 							+ computerName + " , " + introducedDate + " , " + discontinuedDate + " , " + companyOption);
 			// getting Number of computers before adding a new computer data
-			int numberBeforeAdding = mainComputerObj.getComputersNumber();
+			mainComputerObj.getComputersNumber();
 
 			// Requesting "Add a new computer" button from Main Page
 			mainComputerObj.clickonAddComputerBtn();
@@ -25,17 +25,12 @@ public class SearchForComputerTest extends TestBase {
 			addComputerObj.addNewComputer(computerName, introducedDate, discontinuedDate, companyOption);
 
 			// getting Number of computers after adding a new computer data
-			int numberAfterAdding = mainComputerObj.getComputersNumber();
+			mainComputerObj.getComputersNumber();
 
 			// Asserting the creation success message is shown in Main Page
 			Assert.assertTrue(mainComputerObj.getSuccessMsg().contains("has been created"),
 					"No Assertion for 'has been created' success message");
 			System.out.println("Success message of 'has been CREATED' is shown");
-
-			// Asserting the number of computers is increased by 1
-			Assert.assertTrue(numberAfterAdding == numberBeforeAdding + 1,
-					"Number of computers are not increased by 1!!");
-			System.out.println("Number of computers is increased by 1");
 
 			// searching for the computer name
 			mainComputerObj.searchForComputerName(computerName);
@@ -61,16 +56,17 @@ public class SearchForComputerTest extends TestBase {
 
 	@Test(priority = 2, groups = { "Regression" })
 	public void usercannotFindDeletedUniqueComputerName() {
+
 		try {
 			Faker fakename = new Faker();
 			uniqueComputerName = fakename.name().toString();
 			System.out.println("========================================================");
 			System.out.println("========================================================");
-			System.out.println(
-					new Throwable().getStackTrace()[0].getMethodName() + " Test will be executed now with data "
-							+ uniqueComputerName + " , " + introducedDate + " , " + discontinuedDate + " , " + companyOption);
+			System.out.println(new Throwable().getStackTrace()[0].getMethodName()
+					+ " Test will be executed now with data " + uniqueComputerName + " , " + introducedDate + " , "
+					+ discontinuedDate + " , " + companyOption);
 			// getting Number of computers before adding a new computer data
-			int numberBeforeAdding = mainComputerObj.getComputersNumber();
+			mainComputerObj.getComputersNumber();
 
 			// Requesting "Add a new computer" button from Main Page
 			mainComputerObj.clickonAddComputerBtn();
@@ -79,17 +75,12 @@ public class SearchForComputerTest extends TestBase {
 			addComputerObj.addNewComputer(uniqueComputerName, introducedDate, discontinuedDate, companyOption);
 
 			// getting Number of computers after adding a new computer data
-			int numberAfterAdding = mainComputerObj.getComputersNumber();
+			mainComputerObj.getComputersNumber();
 
 			// Asserting the creation success message is shown in Main Page
 			Assert.assertTrue(mainComputerObj.getSuccessMsg().contains("has been created"),
 					"No Assertion for 'has been created' success message");
 			System.out.println("Success message of 'has been CREATED' is shown");
-
-			// Asserting the number of computers is increased by 1
-			Assert.assertTrue(numberAfterAdding == numberBeforeAdding + 1,
-					"Number of computers are not increased by 1!!");
-			System.out.println("Number of computers is increased by 1");
 
 			// searching for the computer name
 			mainComputerObj.searchForComputerName(uniqueComputerName);
@@ -118,7 +109,7 @@ public class SearchForComputerTest extends TestBase {
 			Assert.assertTrue(mainComputerObj.getComputersNumbersText().contains("No computers found"));
 
 			// Navigating to the BaseURL
-			driver.navigate().to(BaseURL);
+			getDriver().navigate().to(BaseURL);
 		} catch (Exception e) {
 			System.out.println(
 					"Exception in " + new Throwable().getStackTrace()[0].getMethodName() + " is :" + e.getMessage());
